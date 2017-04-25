@@ -49,14 +49,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(1)
+	__vue_styles__.push(__webpack_require__(89)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(2)
+	__vue_exports__ = __webpack_require__(90)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(77)
+	var __vue_template__ = __webpack_require__(91)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -68,10 +68,10 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/symeny/hybrid-app/src/views/activityView.vue"
+	__vue_options__.__file = "/Users/symeny/hybrid-app/src/views/catListView.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-c8d9935e"
+	__vue_options__._scopeId = "data-v-da26bf28"
 	__vue_options__.style = __vue_options__.style || {}
 	__vue_styles__.forEach(function (module) {
 	  for (var name in module) {
@@ -88,204 +88,11 @@
 
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-	module.exports = {
-	  "activityView": {
-	    "paddingBottom": 100
-	  }
-	}
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _xNavbar = __webpack_require__(3);
-
-	var _xNavbar2 = _interopRequireDefault(_xNavbar);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  name: 'activityView',
-	  data: function data() {
-	    return {};
-	  },
-	  components: {
-	    XNavbar: _xNavbar2.default
-	  }
-	}; //
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
-	module.exports = exports['default'];
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = []
-
-	/* styles */
-	__vue_styles__.push(__webpack_require__(4)
-	)
-
-	/* script */
-	__vue_exports__ = __webpack_require__(5)
-
-	/* template */
-	var __vue_template__ = __webpack_require__(76)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/Users/symeny/hybrid-app/src/components/x-navbar.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-3a9bc7dc"
-	__vue_options__.style = __vue_options__.style || {}
-	__vue_styles__.forEach(function (module) {
-	  for (var name in module) {
-	    __vue_options__.style[name] = module[name]
-	  }
-	})
-	if (typeof __register_static_styles__ === "function") {
-	  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-	}
-
-	module.exports = __vue_exports__
-
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-	module.exports = {
-	  "x-navbar": {
-	    "width": 750,
-	    "position": "fixed",
-	    "bottom": 0,
-	    "left": 0,
-	    "height": 100,
-	    "backgroundColor": "#f7f7f7",
-	    "flexDirection": "row",
-	    "justifyContent": "center",
-	    "alignItems": "center",
-	    "borderTopStyle": "solid",
-	    "borderTopWidth": 1,
-	    "borderTopColor": "#cccccc"
-	  },
-	  "x-navbar-item": {
-	    "flex": 1,
-	    "flexDirection": "column",
-	    "justifyContent": "center",
-	    "alignItems": "center"
-	  },
-	  "x-navbar-item-title": {
-	    "fontSize": 24
-	  },
-	  "x-navbar-item-media": {
-	    "width": 60,
-	    "height": 60
-	  },
-	  "iconfont": {
-	    "fontFamily": "iconfont",
-	    "fontSize": 50,
-	    "color": "#5f646e"
-	  },
-	  "color-dark": {
-	    "color": "#5f646e"
-	  }
-	}
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _config = __webpack_require__(6);
-
-	var config = _interopRequireWildcard(_config);
-
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-	var domModule = weex.requireModule('dom'); //
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
-	var event = weex.requireModule('event');
-	var navigator = weex.requireModule('navigator');
-	var modal = weex.requireModule('modal');
-	var getBaseURL = __webpack_require__(7).getBaseURL;
-	exports.default = {
-	  data: function data() {
-	    return {
-	      navbar: config.navbar_conf
-	    };
-	  },
-	  created: function created() {
-	    domModule.addRule('fontFace', {
-	      'fontFamily': "iconfont",
-	      'src': 'url(\'' + config.iconfont_src + '\')'
-	    });
-	    console.log(this.navbar);
-	  },
-	  methods: {
-	    redirect: function redirect(to, index) {
-	      // modal.toast({
-	      //   message: '视图跳转'
-	      // })
-	      //全局数据缓存当前 url
-	      // if(index==this.active_index) return;
-	      var baseUrl = getBaseURL(this);
-	      this.active_index = index;
-	      navigator.push({
-	        url: baseUrl + to + '.js',
-	        animated: "true"
-	      }, function () {});
-	    }
-	  }
-	};
-	module.exports = exports['default'];
-
-/***/ }),
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
 /* 6 */
 /***/ (function(module, exports) {
 
@@ -1662,48 +1469,445 @@
 	__webpack_require__(64)('observable');
 
 /***/ }),
-/* 76 */
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = []
+
+	/* styles */
+	__vue_styles__.push(__webpack_require__(81)
+	)
+
+	/* script */
+	__vue_exports__ = __webpack_require__(82)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(83)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/symeny/hybrid-app/src/components/x-header.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__._scopeId = "data-v-65325c0f"
+	__vue_options__.style = __vue_options__.style || {}
+	__vue_styles__.forEach(function (module) {
+	  for (var name in module) {
+	    __vue_options__.style[name] = module[name]
+	  }
+	})
+	if (typeof __register_static_styles__ === "function") {
+	  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+	}
+
+	module.exports = __vue_exports__
+
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports) {
+
+	module.exports = {
+	  "status-bar": {
+	    "height": 40,
+	    "backgroundColor": "#454552"
+	  },
+	  "x-header": {
+	    "position": "fixed",
+	    "top": 0,
+	    "left": 0,
+	    "height": 120,
+	    "width": 750,
+	    "borderBottomStyle": "solid",
+	    "borderBottomWidth": 1,
+	    "borderBottomColor": "#cccccc",
+	    "backgroundColor": "#eff2f7"
+	  },
+	  "padding-rl-20": {
+	    "paddingLeft": 20,
+	    "paddingRight": 20
+	  },
+	  "header-title": {
+	    "height": 80,
+	    "color": "#454552",
+	    "flexDirection": "row",
+	    "justifyContent": "space-between",
+	    "alignItems": "center"
+	  },
+	  "x-header-center": {
+	    "flexDirection": "row",
+	    "justifyContent": "center",
+	    "alignItems": "center"
+	  },
+	  "bg-gray": {
+	    "backgroundColor": "#f7f7f7"
+	  },
+	  "iconfont": {
+	    "fontFamily": "iconfont",
+	    "fontSize": 48
+	  },
+	  "font-dark": {
+	    "color": "#454552"
+	  }
+	}
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _config = __webpack_require__(6);
+
+	var config = _interopRequireWildcard(_config);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	var domModule = weex.requireModule("dom");
+	var navigator = weex.requireModule("navigator");
+
+	var getBaseUrl = __webpack_require__(7).getBaseURL;
+
+	exports.default = {
+	  name: 'x-header',
+	  data: function data() {
+	    return {};
+	  },
+	  created: function created() {
+	    domModule.addRule("fontFace", {
+	      'fontFamily': 'iconfont',
+	      'src': "url('" + config.iconfont_src + "')"
+	    });
+	  },
+	  methods: {
+	    redirect: function redirect(to) {
+	      var baseUrl = getBaseUrl(this);
+	      navigator.push({
+	        'url': baseUrl + to + '.js',
+	        animated: "true"
+	      }, function () {});
+	    }
+	  },
+	  props: {
+	    title: String,
+	    show_back: {
+	      default: false,
+	      type: Boolean
+	    },
+	    show_search: {
+	      default: false,
+	      type: Boolean
+	    }
+	  }
+	};
+	module.exports = exports["default"];
+
+/***/ }),
+/* 83 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["x-navbar"]
-	  }, _vm._l((_vm.navbar), function(item, index) {
-	    return _c('div', {
-	      staticClass: ["x-navbar-item"],
-	      on: {
-	        "click": function($event) {
-	          _vm.redirect(item.url, index)
-	        }
+	    staticClass: ["x-header", "bg-gray"]
+	  }, [_c('div', {
+	    staticClass: ["status-bar"]
+	  }), _c('div', {
+	    staticClass: ["header-title", "padding-rl-20"]
+	  }, [_c('div', [(_vm.show_back) ? _c('text', {
+	    staticClass: ["iconfont", "font-dark", "back"],
+	    on: {
+	      "click": function($event) {
+	        _vm.redirect('/homeView')
 	      }
-	    }, [(index == 0) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 1) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 2) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 3) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 4) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), _c('text', {
-	      staticClass: ["x-navbar-item-title", "color-dark"]
-	    }, [_vm._v(_vm._s(item.title))])])
-	  }))
+	    }
+	  }, [_vm._v("")]) : _vm._e()]), _c('div', {
+	    staticClass: ["x-header-center"]
+	  }, [_c('text', {
+	    staticClass: ["font-dark"]
+	  }, [_vm._v(_vm._s(_vm.title))])]), _c('div', [(_vm.show_search) ? _c('text', {
+	    staticClass: ["iconfont", "font-dark"],
+	    on: {
+	      "click": function($event) {
+	        _vm.redirect('/homeView')
+	      }
+	    }
+	  }, [_vm._v("")]) : _vm._e()])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
 /***/ }),
-/* 77 */
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */
+/***/ (function(module, exports) {
+
+	module.exports = {
+	  "listView": {
+	    "paddingTop": 130
+	  },
+	  "introduce-content": {
+	    "flexDirection": "row",
+	    "flexWrap": "wrap",
+	    "justifyContent": "flex-start"
+	  },
+	  "introduce-item-media-box": {
+	    "width": 345,
+	    "flexDirection": "column",
+	    "justifyContent": "flex-start",
+	    "alignItems": "center"
+	  },
+	  "introduce-item": {
+	    "width": 345,
+	    "flexDirection": "column",
+	    "justifyContent": "flex-start",
+	    "alignItems": "flex-start"
+	  },
+	  "introduce-item-media": {
+	    "width": 300,
+	    "height": 300
+	  },
+	  "active": {
+	    "color": "#D53642"
+	  },
+	  "bg-gray": {
+	    "backgroundColor": "#eff2f7"
+	  },
+	  "font-dark": {
+	    "color": "#454552"
+	  },
+	  "introduce-item-desc": {
+	    "width": 345,
+	    "backgroundColor": "#fec8c9",
+	    "color": "#FF7043"
+	  },
+	  "padding-tb-30": {
+	    "paddingTop": 30,
+	    "paddingBottom": 30
+	  },
+	  "padding-tb-20": {
+	    "paddingTop": 20,
+	    "paddingBottom": 20
+	  },
+	  "margin-tb-20": {
+	    "marginTop": 20,
+	    "marginBottom": 20
+	  },
+	  "margin-b-20": {
+	    "marginBottom": 20
+	  },
+	  "padding-tb-15": {
+	    "paddingTop": 15,
+	    "paddingBottom": 15
+	  },
+	  "padding-b-15": {
+	    "paddingBottom": 15
+	  },
+	  "padding-rl-20": {
+	    "paddingLeft": 20,
+	    "paddingRight": 20
+	  },
+	  "margin-l-10": {
+	    "marginLeft": 10
+	  },
+	  "margin-r-10": {
+	    "marginRight": 10
+	  },
+	  "text-center": {
+	    "textAlign": "center"
+	  },
+	  "bg-white": {
+	    "backgroundColor": "#ffffff"
+	  },
+	  "font-mini": {
+	    "fontSize": 24
+	  },
+	  "font-normal": {
+	    "fontSize": 28
+	  },
+	  "line-ellispse-2": {
+	    "lines": 2,
+	    "textOverflow": "ellipsis"
+	  }
+	}
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _xHeader = __webpack_require__(80);
+
+	var _xHeader2 = _interopRequireDefault(_xHeader);
+
+	var _config = __webpack_require__(6);
+
+	var config = _interopRequireWildcard(_config);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	exports.default = {
+	    name: 'listView',
+	    data: function data() {
+	        return {
+	            list_data: [{
+	                name: '全棉针织纯色四件套',
+	                src: config.baseUrl.image_url + '/images/netease-home/6634f9fb99d222eef1b690f136db1ccc.png',
+	                price: '299'
+	            }, {
+	                name: '大头风扇',
+	                src: config.baseUrl.image_url + '/images/netease-home/a7a524512c34d24a4b9762766dd9d0f0.png',
+	                price: '119'
+	            }, {
+	                name: '安睡慢回弹记忆绵床垫',
+	                src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
+	                price: '599'
+	            }, {
+	                name: '全棉贡缎纯色床单',
+	                src: config.baseUrl.image_url + '/images/netease-home/255a4888161f9b4fe530cf319f14551d.png',
+	                price: '99'
+	            }, {
+	                name: '日式蓬软太鼓抱枕',
+	                src: config.baseUrl.image_url + '/images/netease-home/ad953e16ad8c33b714e7af941ce8cd56.png',
+	                price: '29'
+	            }, {
+	                name: '皮毛一体多用长毛坐垫',
+	                src: config.baseUrl.image_url + '/images/netease-home/442b9d99c0e7f39efd7967e0e5987374.png',
+	                price: '109'
+	            }, {
+	                name: '日式蓬软太鼓抱枕',
+	                src: config.baseUrl.image_url + '/images/netease-home/ad953e16ad8c33b714e7af941ce8cd56.png',
+	                price: '29'
+	            }, {
+	                name: '皮毛一体多用长毛坐垫',
+	                src: config.baseUrl.image_url + '/images/netease-home/442b9d99c0e7f39efd7967e0e5987374.png',
+	                price: '109'
+	            }, {
+	                name: '日式蓬软太鼓抱枕',
+	                src: config.baseUrl.image_url + '/images/netease-home/ad953e16ad8c33b714e7af941ce8cd56.png',
+	                price: '29'
+	            }, {
+	                name: '皮毛一体多用长毛坐垫',
+	                src: config.baseUrl.image_url + '/images/netease-home/442b9d99c0e7f39efd7967e0e5987374.png',
+	                price: '109'
+	            }]
+	        };
+	    },
+	    components: {
+	        XHeader: _xHeader2.default
+	    }
+	};
+	module.exports = exports['default'];
+
+/***/ }),
+/* 91 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["activityView"]
-	  }, [_vm._m(0), _c('x-navbar')], 1)
-	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('scroller', [_c('text', [_vm._v("活动页面")])])
-	}]}
+	    staticClass: ["listView"]
+	  }, [_c('x-header', {
+	    attrs: {
+	      "title": "居家好物",
+	      "show_back": true,
+	      "show_search": true
+	    }
+	  }), _c('scroller', {
+	    staticClass: ["introduce-list", "bg-white"]
+	  }, [_c('div', {
+	    staticClass: ["introduce-content", "padding-rl-20"]
+	  }, _vm._l((_vm.list_data), function(item, index) {
+	    return _c('div', {
+	      staticClass: ["introduce-item"],
+	      style: {
+	        'margin-right': index % 2 == 0 ? '10px' : '0',
+	        'margin-left': index % 2 == 1 ? '10px' : '0'
+	      },
+	      on: {
+	        "click": function($event) {
+	          _vm.redirect('/detailView')
+	        }
+	      }
+	    }, [_c('div', {
+	      staticClass: ["bg-gray", "introduce-item-media-box"]
+	    }, [_c('image', {
+	      staticClass: ["introduce-item-media"],
+	      attrs: {
+	        "src": item.src
+	      }
+	    })]), _c('text', {
+	      staticClass: ["font-mini", "introduce-item-desc", "padding-tb-15", "text-center"]
+	    }, [_vm._v("5cm记忆绵的亲密包裹")]), _c('text', {
+	      staticClass: ["introduce-item-name", "font-normal", "font-dark", "padding-tb-15"]
+	    }, [_vm._v(_vm._s(item.name))]), _c('text', {
+	      staticClass: ["introduce-item-price", "font-normal", "padding-b-15", "active"]
+	    }, [_vm._v("¥" + _vm._s(item.price))])])
+	  }))])], 1)
+	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
 /***/ })

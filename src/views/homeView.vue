@@ -30,7 +30,7 @@
         <div class="introduce-header padding-tb-30"><text class="text-center font-dark">热销商品</text></div>
         <div class="introduce-list">
           <div class="introduce-content padding-rl-20 bg-gray">
-            <div v-for="(item,index) in category_list" class="introduce-item bg-white margin-b-20" :style="{'margin-right':index%2==0?'10px':'0','margin-left':index%2==1?'10px':'0'}">
+            <div v-for="(item,index) in category_list" @click="redirect('/detailView')" class="introduce-item bg-white margin-b-20" :style="{'margin-right':index%2==0?'10px':'0','margin-left':index%2==1?'10px':'0'}">
               <div class="introduce-item-media-box">
                 <image class="introduce-item-media" :src="item.src"></image>
               </div>
@@ -169,13 +169,12 @@
         //全局数据缓存当前 url
         // if(index==this.active_index) return;
         console.log(getBaseURL);
-        return;
+        
         var baseUrl=getBaseURL(this);
         console.log("*****************");
         console.log(baseUrl);
-        this.active_index = index;
         navigator.push({
-          url: to,
+          url: baseUrl+to+'.js',
           animated: "true"
         }, function() {})
       }

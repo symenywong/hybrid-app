@@ -12,7 +12,7 @@
           <image :src="category[active_index].cover" class="cat-cover"></image>
         </cell>
         <cell class="padding-tb-15 cat-right-view-content">
-          <div v-for="item in category[active_index].children" class="cat-item">
+          <div v-for="item in category[active_index].children" @click="redirect('/catListView')" class="cat-item">
             <image :src="item.cover" class="cat-item-cover"></image>
             <text class="text-center font-dark font-mini">{{item.title}}</text>
           </div>
@@ -26,7 +26,11 @@
 <script>
   import XNavbar from '../components/x-navbar.vue'
   import XSearch from '../components/x-search.vue'
+
   import * as config from '../config/config.js'
+
+  const navigator=weex.requireModule("navigator")
+  var getBaseUrl=require("../config/baseUrl.js").getBaseURL
   export default {
     name: 'catView',
     data: function() {
@@ -324,6 +328,15 @@
     methods:{
       change_index:function(index){
         this.active_index==index?null:this.active_index=index;
+      },
+      redirect:function(to){
+        var baseUrl=getBaseUrl(this);
+        navigator.push({
+          'url':baseUrl+to+'.js',
+          animated:"true"
+        },function(){
+
+        })
       }
     },
     components: {

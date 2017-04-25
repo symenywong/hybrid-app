@@ -49,14 +49,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(1)
+	__vue_styles__.push(__webpack_require__(113)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(2)
+	__vue_exports__ = __webpack_require__(114)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(77)
+	var __vue_template__ = __webpack_require__(115)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -68,10 +68,10 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/symeny/hybrid-app/src/views/activityView.vue"
+	__vue_options__.__file = "/Users/symeny/hybrid-app/src/views/topicDetailView.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-c8d9935e"
+	__vue_options__._scopeId = "data-v-5b53c7b8"
 	__vue_options__.style = __vue_options__.style || {}
 	__vue_styles__.forEach(function (module) {
 	  for (var name in module) {
@@ -88,204 +88,11 @@
 
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-	module.exports = {
-	  "activityView": {
-	    "paddingBottom": 100
-	  }
-	}
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _xNavbar = __webpack_require__(3);
-
-	var _xNavbar2 = _interopRequireDefault(_xNavbar);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  name: 'activityView',
-	  data: function data() {
-	    return {};
-	  },
-	  components: {
-	    XNavbar: _xNavbar2.default
-	  }
-	}; //
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
-	module.exports = exports['default'];
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = []
-
-	/* styles */
-	__vue_styles__.push(__webpack_require__(4)
-	)
-
-	/* script */
-	__vue_exports__ = __webpack_require__(5)
-
-	/* template */
-	var __vue_template__ = __webpack_require__(76)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/Users/symeny/hybrid-app/src/components/x-navbar.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-3a9bc7dc"
-	__vue_options__.style = __vue_options__.style || {}
-	__vue_styles__.forEach(function (module) {
-	  for (var name in module) {
-	    __vue_options__.style[name] = module[name]
-	  }
-	})
-	if (typeof __register_static_styles__ === "function") {
-	  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-	}
-
-	module.exports = __vue_exports__
-
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-	module.exports = {
-	  "x-navbar": {
-	    "width": 750,
-	    "position": "fixed",
-	    "bottom": 0,
-	    "left": 0,
-	    "height": 100,
-	    "backgroundColor": "#f7f7f7",
-	    "flexDirection": "row",
-	    "justifyContent": "center",
-	    "alignItems": "center",
-	    "borderTopStyle": "solid",
-	    "borderTopWidth": 1,
-	    "borderTopColor": "#cccccc"
-	  },
-	  "x-navbar-item": {
-	    "flex": 1,
-	    "flexDirection": "column",
-	    "justifyContent": "center",
-	    "alignItems": "center"
-	  },
-	  "x-navbar-item-title": {
-	    "fontSize": 24
-	  },
-	  "x-navbar-item-media": {
-	    "width": 60,
-	    "height": 60
-	  },
-	  "iconfont": {
-	    "fontFamily": "iconfont",
-	    "fontSize": 50,
-	    "color": "#5f646e"
-	  },
-	  "color-dark": {
-	    "color": "#5f646e"
-	  }
-	}
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _config = __webpack_require__(6);
-
-	var config = _interopRequireWildcard(_config);
-
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-	var domModule = weex.requireModule('dom'); //
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
-	var event = weex.requireModule('event');
-	var navigator = weex.requireModule('navigator');
-	var modal = weex.requireModule('modal');
-	var getBaseURL = __webpack_require__(7).getBaseURL;
-	exports.default = {
-	  data: function data() {
-	    return {
-	      navbar: config.navbar_conf
-	    };
-	  },
-	  created: function created() {
-	    domModule.addRule('fontFace', {
-	      'fontFamily': "iconfont",
-	      'src': 'url(\'' + config.iconfont_src + '\')'
-	    });
-	    console.log(this.navbar);
-	  },
-	  methods: {
-	    redirect: function redirect(to, index) {
-	      // modal.toast({
-	      //   message: '视图跳转'
-	      // })
-	      //全局数据缓存当前 url
-	      // if(index==this.active_index) return;
-	      var baseUrl = getBaseURL(this);
-	      this.active_index = index;
-	      navigator.push({
-	        url: baseUrl + to + '.js',
-	        animated: "true"
-	      }, function () {});
-	    }
-	  }
-	};
-	module.exports = exports['default'];
-
-/***/ }),
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
 /* 6 */
 /***/ (function(module, exports) {
 
@@ -1662,48 +1469,322 @@
 	__webpack_require__(64)('observable');
 
 /***/ }),
-/* 76 */
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = []
+
+	/* styles */
+	__vue_styles__.push(__webpack_require__(81)
+	)
+
+	/* script */
+	__vue_exports__ = __webpack_require__(82)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(83)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/symeny/hybrid-app/src/components/x-header.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__._scopeId = "data-v-65325c0f"
+	__vue_options__.style = __vue_options__.style || {}
+	__vue_styles__.forEach(function (module) {
+	  for (var name in module) {
+	    __vue_options__.style[name] = module[name]
+	  }
+	})
+	if (typeof __register_static_styles__ === "function") {
+	  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+	}
+
+	module.exports = __vue_exports__
+
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports) {
+
+	module.exports = {
+	  "status-bar": {
+	    "height": 40,
+	    "backgroundColor": "#454552"
+	  },
+	  "x-header": {
+	    "position": "fixed",
+	    "top": 0,
+	    "left": 0,
+	    "height": 120,
+	    "width": 750,
+	    "borderBottomStyle": "solid",
+	    "borderBottomWidth": 1,
+	    "borderBottomColor": "#cccccc",
+	    "backgroundColor": "#eff2f7"
+	  },
+	  "padding-rl-20": {
+	    "paddingLeft": 20,
+	    "paddingRight": 20
+	  },
+	  "header-title": {
+	    "height": 80,
+	    "color": "#454552",
+	    "flexDirection": "row",
+	    "justifyContent": "space-between",
+	    "alignItems": "center"
+	  },
+	  "x-header-center": {
+	    "flexDirection": "row",
+	    "justifyContent": "center",
+	    "alignItems": "center"
+	  },
+	  "bg-gray": {
+	    "backgroundColor": "#f7f7f7"
+	  },
+	  "iconfont": {
+	    "fontFamily": "iconfont",
+	    "fontSize": 48
+	  },
+	  "font-dark": {
+	    "color": "#454552"
+	  }
+	}
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _config = __webpack_require__(6);
+
+	var config = _interopRequireWildcard(_config);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	var domModule = weex.requireModule("dom");
+	var navigator = weex.requireModule("navigator");
+
+	var getBaseUrl = __webpack_require__(7).getBaseURL;
+
+	exports.default = {
+	  name: 'x-header',
+	  data: function data() {
+	    return {};
+	  },
+	  created: function created() {
+	    domModule.addRule("fontFace", {
+	      'fontFamily': 'iconfont',
+	      'src': "url('" + config.iconfont_src + "')"
+	    });
+	  },
+	  methods: {
+	    redirect: function redirect(to) {
+	      var baseUrl = getBaseUrl(this);
+	      navigator.push({
+	        'url': baseUrl + to + '.js',
+	        animated: "true"
+	      }, function () {});
+	    }
+	  },
+	  props: {
+	    title: String,
+	    show_back: {
+	      default: false,
+	      type: Boolean
+	    },
+	    show_search: {
+	      default: false,
+	      type: Boolean
+	    }
+	  }
+	};
+	module.exports = exports["default"];
+
+/***/ }),
+/* 83 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["x-navbar"]
-	  }, _vm._l((_vm.navbar), function(item, index) {
-	    return _c('div', {
-	      staticClass: ["x-navbar-item"],
-	      on: {
-	        "click": function($event) {
-	          _vm.redirect(item.url, index)
-	        }
+	    staticClass: ["x-header", "bg-gray"]
+	  }, [_c('div', {
+	    staticClass: ["status-bar"]
+	  }), _c('div', {
+	    staticClass: ["header-title", "padding-rl-20"]
+	  }, [_c('div', [(_vm.show_back) ? _c('text', {
+	    staticClass: ["iconfont", "font-dark", "back"],
+	    on: {
+	      "click": function($event) {
+	        _vm.redirect('/homeView')
 	      }
-	    }, [(index == 0) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 1) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 2) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 3) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 4) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), _c('text', {
-	      staticClass: ["x-navbar-item-title", "color-dark"]
-	    }, [_vm._v(_vm._s(item.title))])])
-	  }))
+	    }
+	  }, [_vm._v("")]) : _vm._e()]), _c('div', {
+	    staticClass: ["x-header-center"]
+	  }, [_c('text', {
+	    staticClass: ["font-dark"]
+	  }, [_vm._v(_vm._s(_vm.title))])]), _c('div', [(_vm.show_search) ? _c('text', {
+	    staticClass: ["iconfont", "font-dark"],
+	    on: {
+	      "click": function($event) {
+	        _vm.redirect('/homeView')
+	      }
+	    }
+	  }, [_vm._v("")]) : _vm._e()])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
 /***/ }),
-/* 77 */
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */,
+/* 99 */,
+/* 100 */,
+/* 101 */,
+/* 102 */,
+/* 103 */,
+/* 104 */,
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */
+/***/ (function(module, exports) {
+
+	module.exports = {
+	  "topicDetailView": {
+	    "paddingTop": 120
+	  },
+	  "webview": {
+	    "width": 750,
+	    "height": 1214
+	  }
+	}
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _xHeader = __webpack_require__(80);
+
+	var _xHeader2 = _interopRequireDefault(_xHeader);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	var webview = weex.requireModule("webview");
+	var modal = weex.requireModule("modal");
+
+	exports.default = {
+	    name: "topicDetailView",
+	    data: function data() {
+	        return {
+	            weburl: 'http://m.you.163.com/topic/v1/pub/JYf70Tlt2f.html'
+	        };
+	    },
+	    methods: {
+	        error: function error(event) {
+	            console.log('error', event);
+	            // modal.toast({
+	            //     message: 'error'
+	            // })
+	        }
+	    },
+	    components: {
+	        XHeader: _xHeader2.default
+	    }
+	};
+	module.exports = exports["default"];
+
+/***/ }),
+/* 115 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["activityView"]
-	  }, [_vm._m(0), _c('x-navbar')], 1)
-	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('scroller', [_c('text', [_vm._v("活动页面")])])
-	}]}
+	    staticClass: ["topicDetailView"]
+	  }, [_c('x-header', {
+	    attrs: {
+	      "title": "条纹新风尚"
+	    }
+	  }), _c('web', {
+	    ref: "webview",
+	    staticClass: ["webview"],
+	    attrs: {
+	      "src": _vm.weburl
+	    },
+	    on: {
+	      "error": _vm.error
+	    }
+	  })], 1)
+	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
 /***/ })

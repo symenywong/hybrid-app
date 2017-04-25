@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="x-navbar">
-    <div class="x-navbar-item" @click="redirect('http://1.1.1.11:8080/output'+item.url+'.js',index)" v-for="(item,index) in navbar">
+    <div class="x-navbar-item" @click="redirect(item.url,index)" v-for="(item,index) in navbar">
       <text class="iconfont" v-if="index==0">&#xe6c5;</text>
       <text class="iconfont" v-if="index==1">&#xe63c;</text>
       <text class="iconfont" v-if="index==2">&#xe778;</text>
@@ -10,12 +10,14 @@
     </div>
   </div>
 </template>
+
 <script>
   import * as config from '../config/config.js'
   const domModule = weex.requireModule('dom');
   const event = weex.requireModule('event');
   const navigator = weex.requireModule('navigator');
   const modal = weex.requireModule('modal');
+  var getBaseURL = require('../config/baseUrl.js').getBaseURL
   export default {
     data: function() {
       return {
@@ -30,17 +32,18 @@
       console.log(this.navbar);
     },
     methods: {
-      redirect: function(to,index) {
+      redirect: function(to, index) {
         // modal.toast({
         //   message: '视图跳转'
         // })
         //全局数据缓存当前 url
         // if(index==this.active_index) return;
-        this.active_index=index;
+        var baseUrl=getBaseURL(this);
+        this.active_index = index;
         navigator.push({
-          url: to,
+          url: baseUrl+to+'.js',
           animated: "true"
-        },function(){})
+        }, function() {})
       }
     }
   }

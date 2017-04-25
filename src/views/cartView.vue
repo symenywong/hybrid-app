@@ -2,14 +2,18 @@
   <div class="cartView">
     <x-header title="购物车"></x-header>
     <scroller class="cart-content padding-rl-20">
-      <div class="cart-items padding-tb-20 border-1px-b" v-for="item in 8">
+      <div class="cart-items padding-tb-20 border-1px-b" v-for="(item,index) in cart_data">
         <x-radio class="cart-item padding-tb-30 cart-item-radio"></x-radio>
         <div class="cart-item cart-item-media">
-          <image :src="cart_src" class="cart-item-image"></image>
+          <image :src="item.src" class="cart-item-image"></image>
         </div>
         <div class="cart-item cart-item-content">
-          <text class="font-mini cart-item-title font-dark">YINER音儿 2016夏装/蕾丝钩花拼接薄款衬衣女上衣薄85230010</text>
-          <text class="font-mini cart-item-title font-dark">bn: 85230010</text>
+          <div class="cart-item-title">
+             <text class="font-mini font-dark">{{item.name}}</text>
+             <text class="font-mini cart-item font-dark">×{{item.num}}</text>
+          </div>
+          <text class="font-mini cart-item-subtitle color-gray padding-tb-20">{{item.spec_info}}</text>
+          <text class="font-mini cart-item-subtitle active">¥{{item.price}}</text>
         </div>
       </div>
     </scroller>
@@ -31,7 +35,44 @@
     name: 'cartView',
     data: function() {
       return {
-        cart_src: config.baseUrl.image_url + '/images/products/product_4.jpg'
+        cart_src: config.baseUrl.image_url + '/images/netease-home/a7a524512c34d24a4b9762766dd9d0f0.png',
+        cart_data: [{
+          name: '全棉针织纯色四件套',
+          price: '238.00',
+          num: 1,
+          spec_info: '白色',
+          src: config.baseUrl.image_url + '/images/netease-home/a7a524512c34d24a4b9762766dd9d0f0.png',
+        }, {
+          name: '大头风扇',
+          price: '238.00',
+          num: 1,
+          spec_info: '白色',
+          src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
+        }, {
+          name: '安睡慢回弹记忆绵床垫',
+          price: '238.00',
+          num: 1,
+          spec_info: '白色',
+          src: config.baseUrl.image_url + '/images/netease-home/6634f9fb99d222eef1b690f136db1ccc.png',
+        }, {
+          name: '全棉贡缎纯色床单',
+          price: '238.00',
+          num: 1,
+          spec_info: '白色',
+          src: config.baseUrl.image_url + '/images/netease-home/255a4888161f9b4fe530cf319f14551d.png',
+        }, {
+          name: '日式蓬软太鼓抱枕',
+          price: '238.00',
+          num: 1,
+          spec_info: '白色',
+          src: config.baseUrl.image_url + '/images/netease-home/442b9d99c0e7f39efd7967e0e5987374.png',
+        },{
+          name: '全棉贡缎纯色床单',
+          price: '238.00',
+          num: 1,
+          spec_info: '白色',
+          src: config.baseUrl.image_url + '/images/netease-home/255a4888161f9b4fe530cf319f14551d.png',
+        }]
       }
     },
     components: {
@@ -93,17 +134,34 @@
     justify-content: center;
     align-items: center;
   }
-  
+  .cart-item-radio{
+    width:50px;
+  }
+  .cart-item-media{
+    
+    width:160px;
+  }
   .cart-item-content {
+    width:500px;
     flex: 1;
+    height: 160px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+   
   }
   
   .cart-item-image {
     width: 160px;
     height: 160px;
+  }
+  
+  .cart-item-title {
+    width:500px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+   
   }
   
   .font-mini {
@@ -130,7 +188,7 @@
   
   .cart-secondary-radio {
     flex: 20;
-    height:50px;
+    height: 50px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -162,5 +220,9 @@
   
   .color-white {
     color: #fff;
+  }
+  
+  .color-gray {
+    color: #a0a0a0;
   }
 </style>

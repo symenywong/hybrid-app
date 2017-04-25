@@ -13,7 +13,7 @@
                     <image :src="item.user.avatar" class="topic-item-avatar"></image>
                     <text class="font-mini padding-t-10 padding-rl-20">{{item.user.name}}</text>
                 </div>
-                <div class="topic-item-body">
+                <div class="topic-item-body" @click="redirect('/topicDetailView')">
                     <image :src="item.cover[0].src" class="topic-item-cover"></image>
                 </div>
                 <div class="topic-item-footer padding-rl-20">
@@ -30,8 +30,11 @@
 <script>
     import XHeader from '../components/x-header.vue'
     import XNavbar from '../components/x-navbar.vue'
+
     import * as config from '../config/config.js'
-    
+    const navigator=weex.requireModule("navigator")
+    var getBaseUrl=require("../config/baseUrl.js").getBaseURL
+
     export default {
         name: 'topicView',
         data: function() {
@@ -77,6 +80,17 @@
                         avatar: config.baseUrl.image_url + '/images/topic/14927695155801070.png',
                     }
                 }]
+            }
+        },
+        methods:{
+            redirect:function(to){
+                var baseUrl=getBaseUrl(this);
+                navigator.push({
+                    url:baseUrl+to+'.js',
+                    animated:"true"
+                },function(){
+                    
+                })
             }
         },
         components: {
