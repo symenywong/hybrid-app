@@ -1,0 +1,116 @@
+.font-1x {
+    font-size: 32px
+}
+
+.font-2x {
+    font-size: 40px
+}
+
+.font-3x {
+    font-size: 48px
+}
+
+.font-4x {
+    font-size: 56px
+}
+
+.font-bold {
+    font-weight: bold
+}
+
+.font-slim {
+    font-weight: normal
+}
+
+.bg-success {
+    background-color: #26a866
+}
+
+.bg-light {
+    background-color: #f9f9f9
+}
+
+.bg-gray {
+    background-color: #e7e7e7
+}
+
+.bg-dark {
+    background-color: #34314c
+}
+
+.bg-danger {
+    background-color: #E53935
+}
+
+.bg-warning {
+    background-color: #FF7043
+}
+
+.bg-primary {
+    background-color: #169a85
+}
+
+.bg-white {
+    background-color: #fff
+}
+
+.bg-sliver {
+    background-color: #eff2f7
+}
+
+.bg-blue {
+    background-color: #47b8e0
+}
+
+.color-success {
+    color: #26a866
+}
+
+.color-primary {
+    color: #169a85
+}
+
+.color-white {
+    color: #fff
+}
+
+.color-danger {
+    color: #E53935
+}
+
+.color-dark {
+    color: #5f646e
+}
+
+.color-gray {
+    color: #a0a0a0
+}
+
+.text-center {
+    text-align: center
+}
+
+.padding-tb-30 {
+    padding-top: 30px;
+    padding-bottom: 30px
+}
+
+.padding-tb-20 {
+    padding-top: 20px;
+    padding-bottom: 20px
+}
+
+.margin-tb-20 {
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.padding-tb-15 {
+    padding-top: 15px;
+    padding-bottom: 15px
+}
+
+.padding-rl-20 {
+    padding-left: 20px;
+    padding-right: 20px
+}
