@@ -49,14 +49,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(116)
+	__vue_styles__.push(__webpack_require__(136)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(117)
+	__vue_exports__ = __webpack_require__(137)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(118)
+	var __vue_template__ = __webpack_require__(138)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1883,7 +1883,27 @@
 /* 113 */,
 /* 114 */,
 /* 115 */,
-/* 116 */
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */,
+/* 120 */,
+/* 121 */,
+/* 122 */,
+/* 123 */,
+/* 124 */,
+/* 125 */,
+/* 126 */,
+/* 127 */,
+/* 128 */,
+/* 129 */,
+/* 130 */,
+/* 131 */,
+/* 132 */,
+/* 133 */,
+/* 134 */,
+/* 135 */,
+/* 136 */
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -1891,7 +1911,9 @@
 	    "flex": 1,
 	    "flexDirection": "column",
 	    "justifyContent": "space-between",
-	    "paddingBottom": 100,
+	    "paddingBottom": 100
+	  },
+	  "scroller": {
 	    "paddingTop": 120
 	  },
 	  "topic-header": {
@@ -1987,7 +2009,7 @@
 	}
 
 /***/ }),
-/* 117 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2013,7 +2035,6 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var navigator = weex.requireModule("navigator"); //
-	//
 	//
 	//
 	//
@@ -2108,17 +2129,19 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 118 */
+/* 138 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: ["topicView"]
-	  }, [_c('scroller', [_c('x-header', {
+	  }, [_c('x-header', {
 	    attrs: {
 	      "title": "专题"
 	    }
-	  }), _c('div', {
+	  }), _c('scroller', {
+	    staticClass: ["scroller"]
+	  }, [_c('div', {
 	    staticClass: ["topic-header", "padding-tb-20"]
 	  }, _vm._l((_vm.topic_header), function(item, index) {
 	    return _c('div', {

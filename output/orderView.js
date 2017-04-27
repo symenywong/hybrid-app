@@ -49,14 +49,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(139)
+	__vue_styles__.push(__webpack_require__(116)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(140)
+	__vue_exports__ = __webpack_require__(117)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(141)
+	var __vue_template__ = __webpack_require__(126)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -68,10 +68,10 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/symeny/hybrid-app/src/views/userView.vue"
+	__vue_options__.__file = "/Users/symeny/hybrid-app/src/views/orderView.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-7ed1a4e6"
+	__vue_options__._scopeId = "data-v-1d127234"
 	__vue_options__.style = __vue_options__.style || {}
 	__vue_styles__.forEach(function (module) {
 	  for (var name in module) {
@@ -90,157 +90,9 @@
 /***/ }),
 /* 1 */,
 /* 2 */,
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = []
-
-	/* styles */
-	__vue_styles__.push(__webpack_require__(4)
-	)
-
-	/* script */
-	__vue_exports__ = __webpack_require__(5)
-
-	/* template */
-	var __vue_template__ = __webpack_require__(76)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "/Users/symeny/hybrid-app/src/components/x-navbar.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-3a9bc7dc"
-	__vue_options__.style = __vue_options__.style || {}
-	__vue_styles__.forEach(function (module) {
-	  for (var name in module) {
-	    __vue_options__.style[name] = module[name]
-	  }
-	})
-	if (typeof __register_static_styles__ === "function") {
-	  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-	}
-
-	module.exports = __vue_exports__
-
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-	module.exports = {
-	  "x-navbar": {
-	    "width": 750,
-	    "position": "fixed",
-	    "bottom": 0,
-	    "left": 0,
-	    "height": 100,
-	    "backgroundColor": "#f7f7f7",
-	    "flexDirection": "row",
-	    "justifyContent": "center",
-	    "alignItems": "center",
-	    "borderTopStyle": "solid",
-	    "borderTopWidth": 1,
-	    "borderTopColor": "#cccccc"
-	  },
-	  "x-navbar-item": {
-	    "flex": 1,
-	    "flexDirection": "column",
-	    "justifyContent": "center",
-	    "alignItems": "center"
-	  },
-	  "x-navbar-item-title": {
-	    "fontSize": 24
-	  },
-	  "x-navbar-item-media": {
-	    "width": 60,
-	    "height": 60
-	  },
-	  "iconfont": {
-	    "fontFamily": "iconfont",
-	    "fontSize": 50,
-	    "color": "#5f646e"
-	  },
-	  "color-dark": {
-	    "color": "#5f646e"
-	  }
-	}
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _config = __webpack_require__(6);
-
-	var config = _interopRequireWildcard(_config);
-
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-	var domModule = weex.requireModule('dom'); //
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
-	var event = weex.requireModule('event');
-	var navigator = weex.requireModule('navigator');
-	var modal = weex.requireModule('modal');
-	var getBaseURL = __webpack_require__(7).getBaseURL;
-	exports.default = {
-	  data: function data() {
-	    return {
-	      navbar: config.navbar_conf
-	    };
-	  },
-	  created: function created() {
-	    domModule.addRule('fontFace', {
-	      'fontFamily': "iconfont",
-	      'src': 'url(\'' + config.iconfont_src + '\')'
-	    });
-	    console.log(this.navbar);
-	  },
-	  methods: {
-	    redirect: function redirect(to, index) {
-	      // modal.toast({
-	      //   message: '视图跳转'
-	      // })
-	      //全局数据缓存当前 url
-	      // if(index==this.active_index) return;
-	      var baseUrl = getBaseURL(this);
-	      this.active_index = index;
-	      navigator.push({
-	        url: baseUrl + to + '.js',
-	        animated: "true"
-	      }, function () {});
-	    }
-	  }
-	};
-	module.exports = exports['default'];
-
-/***/ }),
+/* 3 */,
+/* 4 */,
+/* 5 */,
 /* 6 */
 /***/ (function(module, exports) {
 
@@ -1617,45 +1469,209 @@
 	__webpack_require__(64)('observable');
 
 /***/ }),
-/* 76 */
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = []
+
+	/* styles */
+	__vue_styles__.push(__webpack_require__(81)
+	)
+
+	/* script */
+	__vue_exports__ = __webpack_require__(82)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(83)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/symeny/hybrid-app/src/components/x-header.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__._scopeId = "data-v-65325c0f"
+	__vue_options__.style = __vue_options__.style || {}
+	__vue_styles__.forEach(function (module) {
+	  for (var name in module) {
+	    __vue_options__.style[name] = module[name]
+	  }
+	})
+	if (typeof __register_static_styles__ === "function") {
+	  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+	}
+
+	module.exports = __vue_exports__
+
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports) {
+
+	module.exports = {
+	  "status-bar": {
+	    "height": 40,
+	    "backgroundColor": "#454552"
+	  },
+	  "x-header": {
+	    "position": "fixed",
+	    "top": 0,
+	    "left": 0,
+	    "height": 120,
+	    "width": 750,
+	    "borderBottomStyle": "solid",
+	    "borderBottomWidth": 1,
+	    "borderBottomColor": "#cccccc",
+	    "backgroundColor": "#eff2f7"
+	  },
+	  "padding-rl-20": {
+	    "paddingLeft": 20,
+	    "paddingRight": 20
+	  },
+	  "header-title": {
+	    "height": 80,
+	    "color": "#454552",
+	    "flexDirection": "row",
+	    "justifyContent": "space-between",
+	    "alignItems": "center"
+	  },
+	  "x-header-center": {
+	    "flexDirection": "row",
+	    "justifyContent": "center",
+	    "alignItems": "center"
+	  },
+	  "bg-gray": {
+	    "backgroundColor": "#f7f7f7"
+	  },
+	  "iconfont": {
+	    "fontFamily": "iconfont",
+	    "fontSize": 48
+	  },
+	  "font-dark": {
+	    "color": "#454552"
+	  }
+	}
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _config = __webpack_require__(6);
+
+	var config = _interopRequireWildcard(_config);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	var domModule = weex.requireModule("dom");
+	var navigator = weex.requireModule("navigator");
+
+	var getBaseUrl = __webpack_require__(7).getBaseURL;
+
+	exports.default = {
+	  name: 'x-header',
+	  data: function data() {
+	    return {};
+	  },
+	  created: function created() {
+	    domModule.addRule("fontFace", {
+	      'fontFamily': 'iconfont',
+	      'src': "url('" + config.iconfont_src + "')"
+	    });
+	  },
+	  methods: {
+	    redirect: function redirect(to) {
+	      var baseUrl = getBaseUrl(this);
+	      navigator.push({
+	        'url': baseUrl + to + '.js',
+	        animated: "true"
+	      }, function () {});
+	    }
+	  },
+	  props: {
+	    title: String,
+	    show_back: {
+	      default: false,
+	      type: Boolean
+	    },
+	    show_search: {
+	      default: false,
+	      type: Boolean
+	    }
+	  }
+	};
+	module.exports = exports["default"];
+
+/***/ }),
+/* 83 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["x-navbar"]
-	  }, _vm._l((_vm.navbar), function(item, index) {
-	    return _c('div', {
-	      staticClass: ["x-navbar-item"],
-	      on: {
-	        "click": function($event) {
-	          _vm.redirect(item.url, index)
-	        }
+	    staticClass: ["x-header", "bg-gray"]
+	  }, [_c('div', {
+	    staticClass: ["status-bar"]
+	  }), _c('div', {
+	    staticClass: ["header-title", "padding-rl-20"]
+	  }, [_c('div', [(_vm.show_back) ? _c('text', {
+	    staticClass: ["iconfont", "font-dark", "back"],
+	    on: {
+	      "click": function($event) {
+	        _vm.redirect('/homeView')
 	      }
-	    }, [(index == 0) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 1) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 2) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 3) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 4) ? _c('text', {
-	      staticClass: ["iconfont"]
-	    }, [_vm._v("")]) : _vm._e(), _c('text', {
-	      staticClass: ["x-navbar-item-title", "color-dark"]
-	    }, [_vm._v(_vm._s(item.title))])])
-	  }))
+	    }
+	  }, [_vm._v("")]) : _vm._e()]), _c('div', {
+	    staticClass: ["x-header-center"]
+	  }, [_c('text', {
+	    staticClass: ["font-dark"]
+	  }, [_vm._v(_vm._s(_vm.title))])]), _c('div', [(_vm.show_search) ? _c('text', {
+	    staticClass: ["iconfont", "font-dark"],
+	    on: {
+	      "click": function($event) {
+	        _vm.redirect('/homeView')
+	      }
+	    }
+	  }, [_vm._v("")]) : _vm._e()])])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 
 /***/ }),
-/* 77 */,
-/* 78 */,
-/* 79 */,
-/* 80 */,
-/* 81 */,
-/* 82 */,
-/* 83 */,
 /* 84 */,
 /* 85 */,
 /* 86 */,
@@ -1688,146 +1704,133 @@
 /* 113 */,
 /* 114 */,
 /* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */,
-/* 131 */,
-/* 132 */,
-/* 133 */,
-/* 134 */,
-/* 135 */,
-/* 136 */,
-/* 137 */,
-/* 138 */,
-/* 139 */
+/* 116 */
 /***/ (function(module, exports) {
 
 	module.exports = {
-	  "userView": {
-	    "backgroundColor": "#efeff4",
-	    "flex": 1,
-	    "flexDirection": "column",
-	    "justifyContent": "space-between",
-	    "paddingBottom": 100
+	  "orderView": {
+	    "paddingTop": 120,
+	    "backgroundColor": "#efeff4"
 	  },
-	  "userView-header": {
-	    "height": 350,
-	    "backgroundColor": "#34314c",
-	    "paddingTop": 40
-	  },
-	  "user-avatar": {
-	    "marginTop": 20,
+	  "flex-center": {
 	    "flexDirection": "row",
 	    "justifyContent": "center",
 	    "alignItems": "center"
 	  },
-	  "avatar-media": {
-	    "borderRadius": 70
+	  "flex-space-between": {
+	    "flexDirection": "row",
+	    "justifyContent": "space-between",
+	    "alignItems": "center"
+	  },
+	  "flex-start": {
+	    "flexDirection": "row",
+	    "justifyContent": "flex-start",
+	    "alignItems": "center"
+	  },
+	  "flex-end": {
+	    "flexDirection": "row",
+	    "justifyContent": "flex-end",
+	    "alignItems": "center"
+	  },
+	  "button": {
+	    "borderStyle": "solid",
+	    "borderWidth": 1,
+	    "borderColor": "#cccccc",
+	    "borderRadius": 4
+	  },
+	  "get-logistics": {
+	    "marginRight": 30
+	  },
+	  "border-1px-b": {
+	    "borderBottomStyle": "solid",
+	    "borderBottomWidth": 1,
+	    "borderBottomColor": "#cccccc"
+	  },
+	  "order-item-media": {
+	    "width": 130,
+	    "height": 130
+	  },
+	  "order-item-divider": {
+	    "height": 20,
+	    "backgroundColor": "#efeff4"
+	  },
+	  "font-mini": {
+	    "fontSize": 24
+	  },
+	  "font-normal": {
+	    "fontSize": 28
+	  },
+	  "font-2x": {
+	    "fontSize": 40
+	  },
+	  "line-ellispse-2": {
+	    "lines": 2,
+	    "textOverflow": "ellipsis"
+	  },
+	  "text-center": {
+	    "textAlign": "center"
+	  },
+	  "bg-white": {
+	    "backgroundColor": "#ffffff"
 	  },
 	  "padding-tb-20": {
 	    "paddingTop": 20,
 	    "paddingBottom": 20
 	  },
-	  "padding-b-20": {
-	    "paddingBottom": 20
+	  "padding-tb-15": {
+	    "paddingTop": 15,
+	    "paddingBottom": 15
+	  },
+	  "margin-tb-20": {
+	    "marginTop": 20,
+	    "marginBottom": 20
+	  },
+	  "margin-b-20": {
+	    "marginBottom": 20
 	  },
 	  "padding-rl-20": {
 	    "paddingLeft": 20,
 	    "paddingRight": 20
 	  },
-	  "padding-tb-10": {
-	    "paddingTop": 10,
-	    "paddingBottom": 10
+	  "padding-rl-30": {
+	    "paddingLeft": 30,
+	    "paddingRight": 30
 	  },
-	  "login-guid": {
-	    "textAlign": "center",
-	    "color": "#ffffff"
+	  "active": {
+	    "color": "#D53642"
 	  },
-	  "order-header": {
-	    "backgroundColor": "#ffffff"
-	  },
-	  "order-content": {
-	    "flexDirection": "row",
-	    "alignItems": "center",
-	    "justifyContent": "center",
-	    "backgroundColor": "#ffffff",
-	    "flexWrap": "wrap"
-	  },
-	  "order-item": {
-	    "flex": 1,
-	    "alignItems": "center",
-	    "justifyContent": "center"
-	  },
-	  "order-content-1": {
-	    "flexDirection": "row",
-	    "alignItems": "center",
-	    "justifyContent": "flex-start",
-	    "backgroundColor": "#ffffff",
-	    "flexWrap": "wrap"
-	  },
-	  "order-item-1": {
-	    "width": 187
-	  },
-	  "order-item-icon": {
-	    "width": 80,
-	    "height": 80
-	  },
-	  "font-mini": {
-	    "fontSize": 24
-	  },
-	  "border-1px-b": {
-	    "borderBottomStyle": "solid",
-	    "borderBottomWidth": 1,
-	    "borderBottomColor": "#c9c9c9"
-	  },
-	  "margin-t-20": {
-	    "marginTop": 20
-	  },
-	  "iconfont": {
-	    "fontFamily": "iconfont"
-	  },
-	  "font-5x": {
-	    "fontSize": 60
-	  },
-	  "font-gray": {
-	    "color": "#5f646e"
-	  },
-	  "font-normal": {
-	    "fontSize": 28
-	  },
-	  "text-center": {
-	    "textAlign": "center"
+	  "bg-gray": {
+	    "backgroundColor": "#eff2f7"
 	  },
 	  "font-dark": {
 	    "color": "#454552"
+	  },
+	  "iconfont": {
+	    "fontFamily": "iconfont"
 	  }
 	}
 
 /***/ }),
-/* 140 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
-	var _xNavbar = __webpack_require__(3);
+	var _xHeader = __webpack_require__(80);
 
-	var _xNavbar2 = _interopRequireDefault(_xNavbar);
+	var _xHeader2 = _interopRequireDefault(_xHeader);
+
+	var _xTabbar = __webpack_require__(118);
+
+	var _xTabbar2 = _interopRequireDefault(_xTabbar);
+
+	var _tabbarItem = __webpack_require__(122);
+
+	var _tabbarItem2 = _interopRequireDefault(_tabbarItem);
 
 	var _config = __webpack_require__(6);
 
@@ -1837,28 +1840,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
+	var navigator = weex.requireModule("navigator"); //
 	//
 	//
 	//
@@ -1887,204 +1869,331 @@
 	//
 	//
 
-	var animation = weex.requireModule("animation");
-	var domModule = weex.requireModule('dom');
-	var navigator = weex.requireModule('navigator');
-	var modal = weex.requireModule('modal');
+	var domModule = weex.requireModule("dom");
 	var getBaseUrl = __webpack_require__(7).getBaseURL;
-
 	exports.default = {
-	  name: 'userView',
-	  data: function data() {
-	    return {
-	      user_avatar: config.baseUrl.image_url + '/images/slice/user_logo.jpg',
-	      order_item: [{
-	        title: '代付款',
-	        url: '/',
-	        icon: '&#xe6bb;',
-	        src: config.baseUrl.image_url + '/images/icons/needpay.png'
-	      }, {
-	        title: '待发货',
-	        url: '/',
-	        icon: '',
-	        src: config.baseUrl.image_url + '/images/icons/icon-order.png'
-	      }, {
-	        title: '已发货',
-	        url: '/',
-	        icon: '',
-	        src: config.baseUrl.image_url + '/images/icons/send.png'
-	      }, {
-	        title: '待评价',
-	        url: '/',
-	        icon: '',
-	        src: config.baseUrl.image_url + '/images/icons/icon-list.png'
-	      }, {
-	        title: '售后服务',
-	        url: '/',
-	        icon: '',
-	        src: config.baseUrl.image_url + '/images/icons/refund.png'
-	      }],
-	      others: [{
-	        title: '个人设置',
-	        url: '/',
-	        icon: '',
-	        src: config.baseUrl.image_url + '/images/icons/setting.png'
-	      }, {
-	        title: '收货地址',
-	        url: '/',
-	        icon: '',
-	        src: config.baseUrl.image_url + '/images/icons/location.png'
-	      }, {
-	        title: '我的卡券',
-	        url: '/',
-	        icon: '',
-	        src: config.baseUrl.image_url + '/images/icons/location.png'
-	      }, {
-	        title: '礼品卡',
-	        url: '/',
-	        icon: '',
-	        src: config.baseUrl.image_url + '/images/icons/location.png'
-	      }, {
-	        title: '推广服务',
-	        url: '/',
-	        icon: '',
-	        src: config.baseUrl.image_url + '/images/icons/flash.png'
-	      }, {
-	        title: '帮助服务',
-	        url: '/',
-	        icon: '',
-	        src: config.baseUrl.image_url + '/images/icons/service.png'
-	      }, {
-	        title: '意见反馈',
-	        url: '/',
-	        icon: '',
-	        src: config.baseUrl.image_url + '/images/icons/service.png'
-	      }]
-	    };
-	  },
-	  created: function created() {
-	    //处理 iconfont 字体图标
-	    var domModule = weex.requireModule("dom");
-	    domModule.addRule('fontFace', {
-	      'fontFamily': "iconfont",
-	      'src': 'url(\'' + config.iconfont_src + '\')'
-	    });
-	  },
-	  methods: {
-	    redirect: function redirect(to) {
-	      var baseUrl = getBaseUrl(this);
-	      navigator.push({
-	        url: baseUrl + to + '.js',
-	        animated: "true"
-	      }, function () {});
+	    name: 'orderView',
+	    data: function data() {
+	        return {
+	            tabbar: ['全部', '待付款', '待发货', '已发货', '待评价'],
+	            order_data: {
+	                '11716979': [{
+	                    name: '全棉针织纯色四件套',
+	                    src: config.baseUrl.image_url + '/images/netease-home/6634f9fb99d222eef1b690f136db1ccc.png',
+	                    price: '299'
+	                }, {
+	                    name: '大头风扇',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a7a524512c34d24a4b9762766dd9d0f0.png',
+	                    price: '119'
+	                }, {
+	                    name: '安睡慢回弹记忆绵床垫',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
+	                    price: '599'
+	                }],
+	                '11716998': [{
+	                    name: '日式蓬软太鼓抱枕',
+	                    src: config.baseUrl.image_url + '/images/netease-home/ad953e16ad8c33b714e7af941ce8cd56.png',
+	                    price: '29'
+	                }],
+	                '11816008': [{
+	                    name: '安睡慢回弹记忆绵床垫',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
+	                    price: '599'
+	                }, {
+	                    name: '全棉贡缎纯色床单',
+	                    src: config.baseUrl.image_url + '/images/netease-home/255a4888161f9b4fe530cf319f14551d.png',
+	                    price: '99'
+	                }]
+	            }
+	        };
+	    },
+	    created: function created() {
+	        domModule.addRule("fontFace", {
+	            'fontFamily': 'iconfont',
+	            'src': 'url(\'' + config.iconfont_src + '\')'
+	        });
+	    },
+	    methods: {
+	        redirect: function redirect(to) {
+	            var baseUrl = getBaseUrl(this);
+	            navigator.push({
+	                url: '',
+	                animated: 'true'
+	            });
+	        }
+	    },
+	    components: {
+	        XHeader: _xHeader2.default,
+	        XTabbar: _xTabbar2.default,
+	        TabbarItem: _tabbarItem2.default
 	    }
-	  },
-	  components: {
-	    XNavbar: _xNavbar2.default
-	  }
 	};
 	module.exports = exports['default'];
 
 /***/ }),
-/* 141 */
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = []
+
+	/* styles */
+	__vue_styles__.push(__webpack_require__(119)
+	)
+
+	/* script */
+	__vue_exports__ = __webpack_require__(120)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(121)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/symeny/hybrid-app/src/components/x-tabbar.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__._scopeId = "data-v-7ed34160"
+	__vue_options__.style = __vue_options__.style || {}
+	__vue_styles__.forEach(function (module) {
+	  for (var name in module) {
+	    __vue_options__.style[name] = module[name]
+	  }
+	})
+	if (typeof __register_static_styles__ === "function") {
+	  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+	}
+
+	module.exports = __vue_exports__
+
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports) {
+
+	module.exports = {
+	  "x-tabbar": {
+	    "backgroundColor": "#eff2f7",
+	    "height": 80,
+	    "flexDirection": "row",
+	    "justifyContent": "center",
+	    "alignItems": "center"
+	  }
+	}
+
+/***/ }),
+/* 120 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+
+	exports.default = {
+	    name: 'x-tabbar',
+	    data: function data() {
+	        return {};
+	    }
+	};
+	module.exports = exports['default'];
+
+/***/ }),
+/* 121 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["userView"]
-	  }, [_c('scroller', [_c('div', {
-	    staticClass: ["userView-header"]
-	  }, [_c('div', {
-	    staticClass: ["user-avatar"]
-	  }, [_c('image', {
-	    staticClass: ["avatar-media"],
-	    staticStyle: {
-	      width: "140px",
-	      height: "140px"
+	    staticClass: ["x-tabbar"]
+	  }, [_vm._t("tabbar-item")], 2)
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+
+/***/ }),
+/* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = []
+
+	/* styles */
+	__vue_styles__.push(__webpack_require__(123)
+	)
+
+	/* script */
+	__vue_exports__ = __webpack_require__(124)
+
+	/* template */
+	var __vue_template__ = __webpack_require__(125)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "/Users/symeny/hybrid-app/src/components/tabbar-item.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	__vue_options__._scopeId = "data-v-6b2b48b6"
+	__vue_options__.style = __vue_options__.style || {}
+	__vue_styles__.forEach(function (module) {
+	  for (var name in module) {
+	    __vue_options__.style[name] = module[name]
+	  }
+	})
+	if (typeof __register_static_styles__ === "function") {
+	  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+	}
+
+	module.exports = __vue_exports__
+
+
+/***/ }),
+/* 123 */
+/***/ (function(module, exports) {
+
+	module.exports = {
+	  "tabbar-item": {
+	    "flex": 1
+	  },
+	  "text-center": {
+	    "textAlign": "center"
+	  },
+	  "color-dark": {
+	    "color": "#454552"
+	  },
+	  "font-normal": {
+	    "fontSize": 28
+	  }
+	}
+
+/***/ }),
+/* 124 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+
+	exports.default = {
+	    name: 'tabbar-item',
+	    data: function data() {
+	        return {};
 	    },
+	    props: {
+	        title: String,
+	        index: Number,
+	        active: Number
+	    }
+	};
+	module.exports = exports['default'];
+
+/***/ }),
+/* 125 */
+/***/ (function(module, exports) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: ["tabbar-item"]
+	  }, [_c('text', {
+	    staticClass: ["text-center", "font-normal", "color-dark"],
+	    style: {
+	      color: _vm.index == _vm.active ? '#D53642' : '#454552',
+	      'font-size': _vm.index == _vm.active ? '30px' : '28px'
+	    }
+	  }, [_vm._v(_vm._s(_vm.title))])])
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: ["orderView"]
+	  }, [_c('x-header', {
 	    attrs: {
-	      "src": _vm.user_avatar
-	    },
-	    on: {
-	      "click": function($event) {
-	        _vm.redirect('/loginView')
-	      }
+	      "title": "我的订单",
+	      "show_back": true
 	    }
-	  })]), _c('div', {
-	    staticClass: ["padding-tb-20"],
-	    on: {
-	      "click": function($event) {
-	        _vm.redirect('/loginView')
+	  }), _c('x-tabbar', _vm._l((_vm.tabbar), function(item, index) {
+	    return _c('tabbar-item', {
+	      key: index,
+	      attrs: {
+	        "title": item,
+	        "active": 0,
+	        "index": index
+	      },
+	      slot: "tabbar-item"
+	    })
+	  })), _c('list', {
+	    staticClass: ["order-lists"]
+	  }, _vm._l((_vm.order_data), function(item, index) {
+	    return _c('cell', {
+	      staticClass: ["order-item", "bg-white"],
+	      appendAsTree: true,
+	      attrs: {
+	        "append": "tree"
 	      }
-	    }
-	  }, [_c('text', {
-	    staticClass: ["login-guid"]
-	  }, [_vm._v("symeny")])]), _c('div', {
-	    on: {
-	      "click": function($event) {
-	        _vm.redirect('/loginView')
-	      }
-	    }
-	  }, [_c('text', {
-	    staticClass: ["login-guid"]
-	  }, [_vm._v("登陆/注册")])])]), _vm._m(0), _c('div', {
-	    staticClass: ["order-content", "padding-tb-20"]
-	  }, _vm._l((_vm.order_item), function(item, index) {
-	    return _c('div', {
-	      staticClass: ["order-item"],
-	      on: {
-	        "click": function($event) {
-	          _vm.redirect('/orderView')
+	    }, [_c('div', {
+	      staticClass: ["order-item-header", "padding-rl-20", "padding-tb-20", "border-1px-b", "flex-space-between"]
+	    }, [_c('text', {
+	      staticClass: ["font-mini", "font-dark"]
+	    }, [_vm._v("订单编号:" + _vm._s(index))]), _c('text', {
+	      staticClass: ["font-mini", "font-dark", "iconfont", "font-2x"]
+	    }, [_vm._v("")])]), _c('div', {
+	      staticClass: ["order-item-body", "padding-rl-20", "padding-tb-20", "border-1px-b", "flex-space-between"]
+	    }, [_c('div', {
+	      staticClass: ["order-item-cell", "flex-start"]
+	    }, _vm._l((item), function(item1, index1) {
+	      return _c('image', {
+	        staticClass: ["order-item-media"],
+	        attrs: {
+	          "src": item1.src
 	        }
-	      }
-	    }, [(index == 0) ? _c('text', {
-	      staticClass: ["iconfont", "text-center", "font-5x", "font-gray"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 1) ? _c('text', {
-	      staticClass: ["iconfont", "text-center", "font-5x", "font-gray"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 2) ? _c('text', {
-	      staticClass: ["iconfont", "text-center", "font-5x", "font-gray"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 3) ? _c('text', {
-	      staticClass: ["iconfont", "text-center", "font-5x", "font-gray"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 4) ? _c('text', {
-	      staticClass: ["iconfont", "text-center", "font-5x", "font-gray"]
-	    }, [_vm._v("")]) : _vm._e(), _c('text', {
-	      staticClass: ["padding-tb-10", "text-center", "font-mini", "font-dark"]
-	    }, [_vm._v(_vm._s(item.title))])])
-	  })), _vm._m(1), _c('div', {
-	    staticClass: ["order-content-1", "padding-tb-20"]
-	  }, _vm._l((_vm.others), function(item, index) {
-	    return _c('div', {
-	      staticClass: ["order-item-1", "padding-tb-20"]
-	    }, [(index == 0) ? _c('text', {
-	      staticClass: ["iconfont", "text-center", "font-5x", "font-gray"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 1) ? _c('text', {
-	      staticClass: ["iconfont", "text-center", "font-5x", "font-gray"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 2) ? _c('text', {
-	      staticClass: ["iconfont", "text-center", "font-5x", "font-gray"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 3) ? _c('text', {
-	      staticClass: ["iconfont", "text-center", "font-5x", "font-gray"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 4) ? _c('text', {
-	      staticClass: ["iconfont", "text-center", "font-5x", "font-gray"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 5) ? _c('text', {
-	      staticClass: ["iconfont", "text-center", "font-5x", "font-gray"]
-	    }, [_vm._v("")]) : _vm._e(), (index == 6) ? _c('text', {
-	      staticClass: ["iconfont", "text-center", "font-5x", "font-gray"]
-	    }, [_vm._v("")]) : _vm._e(), _c('text', {
-	      staticClass: ["padding-tb-10", "text-center", "font-mini", "font-dark"]
-	    }, [_vm._v(_vm._s(item.title))])])
-	  }))]), _c('x-navbar')], 1)
+	      })
+	    })), _c('text', {
+	      staticClass: ["font-mini", "font-dark"]
+	    }, [_vm._v("交易成功")])]), _vm._m(0, true), _c('div', {
+	      staticClass: ["order-item-divider"]
+	    })])
+	  }))], 1)
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["order-header", "border-1px-b", "padding-tb-20", "padding-rl-20"]
+	    staticClass: ["order-item-footer", "padding-rl-20", "flex-end", "padding-tb-15"]
 	  }, [_c('text', {
-	    staticClass: ["font-dark", "font-normal"]
-	  }, [_vm._v("我的订单")])])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: ["order-header", "border-1px-b", "margin-t-20", "padding-tb-20", "padding-rl-20"]
-	  }, [_c('text', {
-	    staticClass: ["font-dark", "font-normal"]
-	  }, [_vm._v("其他")])])
+	    staticClass: ["font-normal", "padding-rl-30", "padding-tb-15", "button", "get-logistics", "font-dark"]
+	  }, [_vm._v("追踪物流")]), _c('text', {
+	    staticClass: ["font-normal", "padding-rl-30", "font-dark", "padding-tb-15", "button"]
+	  }, [_vm._v("评价有礼")])])
 	}]}
 	module.exports.render._withStripped = true
 

@@ -169,12 +169,12 @@
         //全局数据缓存当前 url
         // if(index==this.active_index) return;
         console.log(getBaseURL);
-        
-        var baseUrl=getBaseURL(this);
+  
+        var baseUrl = getBaseURL(this);
         console.log("*****************");
         console.log(baseUrl);
         navigator.push({
-          url: baseUrl+to+'.js',
+          url: baseUrl + to + '.js',
           animated: "true"
         }, function() {})
       }

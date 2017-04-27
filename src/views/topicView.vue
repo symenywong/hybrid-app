@@ -1,7 +1,7 @@
 <template>
     <div class="topicView">
-        <scroller> 
-            <x-header title="专题"></x-header>
+        <x-header title="专题"></x-header>
+        <scroller class="scroller">
             <div class="topic-header padding-tb-20">
                 <div class="topic-header-item" v-for="(item,index) in topic_header">
                     <image :src="item.src" class="topic-header-media"></image>
@@ -21,7 +21,6 @@
                     <text class="color-gray padding-b-20 font-normal">{{item.subtitle}}</text>
                 </div>
             </div>
-    
         </scroller>
         <x-navbar></x-navbar>
     </div>
@@ -30,11 +29,11 @@
 <script>
     import XHeader from '../components/x-header.vue'
     import XNavbar from '../components/x-navbar.vue'
-
+    
     import * as config from '../config/config.js'
-    const navigator=weex.requireModule("navigator")
-    var getBaseUrl=require("../config/baseUrl.js").getBaseURL
-
+    const navigator = weex.requireModule("navigator")
+    var getBaseUrl = require("../config/baseUrl.js").getBaseURL
+    
     export default {
         name: 'topicView',
         data: function() {
@@ -82,14 +81,14 @@
                 }]
             }
         },
-        methods:{
-            redirect:function(to){
-                var baseUrl=getBaseUrl(this);
+        methods: {
+            redirect: function(to) {
+                var baseUrl = getBaseUrl(this);
                 navigator.push({
-                    url:baseUrl+to+'.js',
-                    animated:"true"
-                },function(){
-                    
+                    url: baseUrl + to + '.js',
+                    animated: "true"
+                }, function() {
+    
                 })
             }
         },
@@ -105,8 +104,11 @@
         flex: 1;
         flex-direction: column;
         justify-content: space-between;
-        padding-bottom:100px;
-        padding-top:120px;
+        padding-bottom: 100px;
+    }
+    
+    .scroller {
+        padding-top: 120px;
     }
     
     .topic-header {
@@ -179,9 +181,11 @@
     .padding-b-20 {
         padding-bottom: 20px;
     }
-    .padding-t-60{
-        padding-top:60px;
+    
+    .padding-t-60 {
+        padding-top: 60px;
     }
+    
     .margin-tb-20 {
         margin-top: 20px;
         margin-bottom: 20px;

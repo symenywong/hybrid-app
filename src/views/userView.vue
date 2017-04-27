@@ -3,12 +3,12 @@
     <scroller>
       <div class="userView-header">
         <div class="user-avatar">
-          <image :src="user_avatar" class="avatar-media" style="width:140px;height:140px;"></image>
+          <image :src="user_avatar" @click="redirect('/loginView')" class="avatar-media" style="width:140px;height:140px;"></image>
         </div>
-        <div class="padding-tb-20">
+        <div class="padding-tb-20" @click="redirect('/loginView')">
           <text class="login-guid">symeny</text>
         </div>
-        <div>
+        <div @click="redirect('/loginView')">
           <text class="login-guid">登陆/注册</text>
         </div>
       </div>
@@ -16,7 +16,7 @@
         <text class="font-dark font-normal">我的订单</text>
       </div>
       <div class="order-content padding-tb-20">
-        <div class="order-item" v-for="(item,index) in order_item">
+        <div class="order-item" v-for="(item,index) in order_item" @click="redirect('/orderView')">
           <text class="iconfont text-center font-5x font-gray" v-if="index==0">&#xe6bb;</text>
           <text class="iconfont text-center font-5x font-gray" v-if="index==1">&#xe6c6;</text>
           <text class="iconfont text-center font-5x font-gray" v-if="index==2">&#xe60c;</text>
@@ -53,9 +53,11 @@
   import * as config from '../config/config.js'
   
   const animation = weex.requireModule("animation")
-  var domModule = weex.requireModule('dom');
-  var navigator = weex.requireModule('navigator');
-  var modal = weex.requireModule('modal');
+  const domModule = weex.requireModule('dom');
+  const navigator = weex.requireModule('navigator');
+  const modal = weex.requireModule('modal');
+  var getBaseUrl = require("../config/baseUrl.js").getBaseURL
+  
   export default {
     name: 'userView',
     data: function() {
@@ -135,6 +137,17 @@
         'src': `url('${config.iconfont_src}')`
       });
     },
+    methods: {
+      redirect: function(to) {
+        var baseUrl = getBaseUrl(this);
+        navigator.push({
+          url: baseUrl + to + '.js',
+          animated: "true"
+        }, function() {
+  
+        })
+      }
+    },
     components: {
       XNavbar
     }
@@ -153,7 +166,7 @@
   .userView-header {
     height: 350px;
     background-color: #34314c;
-    padding-top:40px;
+    padding-top: 40px;
   }
   
   .user-avatar {
@@ -171,6 +184,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  
   .padding-b-20 {
     padding-bottom: 20px;
   }
@@ -193,28 +207,29 @@
   .order-header {
     background-color: #fff;
   }
+  
   .order-content {
     flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: #fff;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
   }
-
+  
   .order-item {
-    flex:1;
+    flex: 1;
     align-items: center;
     justify-content: center;
   }
-
+  
   .order-content-1 {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     background-color: #fff;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
   }
-
+  
   .order-item-1 {
     width: 187px;
   }
@@ -249,13 +264,16 @@
   .font-gray {
     color: #5f646e;
   }
-  .font-normal{
-    font-size:28px;
+  
+  .font-normal {
+    font-size: 28px;
   }
+  
   .text-center {
     text-align: center;
   }
-  .font-dark{
-    color:#454552;
+  
+  .font-dark {
+    color: #454552;
   }
 </style>

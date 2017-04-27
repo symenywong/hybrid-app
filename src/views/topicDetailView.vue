@@ -2,7 +2,6 @@
     <div class="topicDetailView">
         <x-header title="条纹新风尚"></x-header>
         <web ref="webview" class="webview" @error="error" :src="weburl"></web>
-    
     </div>
 </template>
 
