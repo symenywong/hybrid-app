@@ -49,14 +49,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(130)
+	__vue_styles__.push(__webpack_require__(116)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(131)
+	__vue_exports__ = __webpack_require__(117)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(132)
+	var __vue_template__ = __webpack_require__(118)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -68,10 +68,10 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/symeny/hybrid-app/src/views/registerView.vue"
+	__vue_options__.__file = "/Users/symeny/hybrid-app/src/views/orderDetailView.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-7b6ec436"
+	__vue_options__._scopeId = "data-v-cb5a40d2"
 	__vue_options__.style = __vue_options__.style || {}
 	__vue_styles__.forEach(function (module) {
 	  for (var name in module) {
@@ -1704,93 +1704,105 @@
 /* 113 */,
 /* 114 */,
 /* 115 */,
-/* 116 */,
-/* 117 */,
-/* 118 */,
-/* 119 */,
-/* 120 */,
-/* 121 */,
-/* 122 */,
-/* 123 */,
-/* 124 */,
-/* 125 */,
-/* 126 */,
-/* 127 */,
-/* 128 */,
-/* 129 */,
-/* 130 */
+/* 116 */
 /***/ (function(module, exports) {
 
 	module.exports = {
-	  "input": {
-	    "placeholderColor": "#a0a0a0",
-	    "paddingTop": 30,
-	    "paddingBottom": 30
-	  },
-	  "register-content": {
+	  "orderDetailView": {
 	    "paddingTop": 120
+	  },
+	  "scroller": {
+	    "backgroundColor": "#efeff4"
+	  },
+	  "order-media": {
+	    "width": 180,
+	    "height": 160
+	  },
+	  "order-item-content": {
+	    "width": 530
+	  },
+	  "order-item-title": {
+	    "flexDirection": "row",
+	    "justifyContent": "space-between",
+	    "alignItems": "center"
+	  },
+	  "order-item": {
+	    "flexDirection": "row",
+	    "justifyContent": "center"
+	  },
+	  "order-footer": {
+	    "flexDirection": "row",
+	    "justifyContent": "flex-end",
+	    "alignItems": "center"
+	  },
+	  "flex-start": {
+	    "flexDirection": "row",
+	    "justifyContent": "flex-start",
+	    "alignItems": "center"
+	  },
+	  "padding-tb-20": {
+	    "paddingTop": 20,
+	    "paddingBottom": 20
+	  },
+	  "padding-rl-20": {
+	    "paddingRight": 20,
+	    "paddingLeft": 20
+	  },
+	  "padding-tb-15": {
+	    "paddingTop": 15,
+	    "paddingBottom": 15
+	  },
+	  "padding-b-15": {
+	    "paddingBottom": 15
+	  },
+	  "margin-b-20": {
+	    "marginBottom": 20
+	  },
+	  "bg-white": {
+	    "backgroundColor": "#ffffff"
 	  },
 	  "border-1px-b": {
 	    "borderBottomStyle": "solid",
 	    "borderBottomWidth": 1,
 	    "borderBottomColor": "#cccccc"
 	  },
-	  "username": {
-	    "marginTop": 40
-	  },
-	  "padding-rl-30": {
-	    "paddingRight": 30,
-	    "paddingLeft": 30
-	  },
-	  "margin-tb-30": {
-	    "marginTop": 30,
-	    "marginBottom": 30
-	  },
-	  "logo-content": {
-	    "flexDirection": "row",
-	    "justifyContent": "center",
-	    "alignItems": "center"
-	  },
-	  "logo-image": {
-	    "width": 260,
-	    "height": 260
-	  },
-	  "bg-danger": {
-	    "backgroundColor": "#D53642"
-	  },
-	  "register-btn": {
-	    "paddingTop": 30,
-	    "paddingBottom": 30,
-	    "color": "#ffffff",
-	    "textAlign": "center",
-	    "borderRadius": 6,
-	    "marginTop": 50
-	  },
-	  "font-dark": {
+	  "color-dark": {
 	    "color": "#454552"
-	  },
-	  "padding-tb-20": {
-	    "paddingTop": 20,
-	    "paddingBottom": 20
-	  },
-	  "forgot-pwd": {
-	    "textAlign": "right"
 	  },
 	  "color-gray": {
 	    "color": "#a0a0a0"
 	  },
-	  "link-content": {
-	    "flexDirection": "row",
-	    "justifyContent": "space-between",
-	    "alignItems": "center"
+	  "color-danger": {
+	    "color": "#D53642"
+	  },
+	  "font-normal": {
+	    "fontSize": 28
+	  },
+	  "font-mini": {
+	    "fontSize": 24
+	  },
+	  "button": {
+	    "paddingTop": 15,
+	    "paddingBottom": 15,
+	    "paddingRight": 15,
+	    "paddingLeft": 15,
+	    "borderRadius": 4,
+	    "borderStyle": "solid",
+	    "borderWidth": 1,
+	    "borderColor": "#cccccc",
+	    "marginRight": 20
+	  },
+	  "button-danger": {
+	    "borderColor": "#D53642",
+	    "color": "#D53642"
 	  }
 	}
 
 /***/ }),
-/* 131 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -1800,9 +1812,14 @@
 
 	var _xHeader2 = _interopRequireDefault(_xHeader);
 
+	var _config = __webpack_require__(6);
+
+	var config = _interopRequireWildcard(_config);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var navigator = weex.requireModule("navigator"); //
 	//
 	//
 	//
@@ -1827,100 +1844,148 @@
 	//
 	//
 	//
-
-	var getBaseUrl = __webpack_require__(7).getBaseURL;
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
-	    name: 'registerView',
+	    name: 'orderDetailView',
 	    data: function data() {
-	        return {};
-	    },
-	    methods: {
-	        redirect: function redirect(to) {
-	            var baseUrl = getBaseUrl(this);
-	            navigator.push({
-	                url: baseUrl + to + '.js',
-	                animated: "true"
-	            }, function () {});
-	        }
+	        return {
+	            order_detail: {
+	                product_data: [{
+	                    name: '轻摔牛皮男士休闲鞋',
+	                    price: '319.00',
+	                    spec_info: '墨绿;41码',
+	                    num: 1,
+	                    src: config.baseUrl.image_url + '/images/netease/85566d138ea55e6aaeda2cda02df66f8.png'
+	                }, {
+	                    name: '网易智造安卓快充数据线',
+	                    price: '0.00',
+	                    spec_info: '1米',
+	                    num: 1,
+	                    src: config.baseUrl.image_url + '/images/netease/c09d784ba592e4fadabbaef6b2e95a95.png'
+	                }]
+	            }
+	        };
 	    },
 	    components: {
 	        XHeader: _xHeader2.default
 	    }
 	};
-	module.exports = exports["default"];
+	module.exports = exports['default'];
 
 /***/ }),
-/* 132 */
+/* 118 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["registerView"]
+	    staticClass: ["orderDetailView"]
 	  }, [_c('x-header', {
 	    attrs: {
-	      "show_back": true
+	      "show_back": true,
+	      "title": "订单详情"
 	    }
-	  }), _c('div', {
-	    staticClass: ["register-content", "padding-rl-30"]
-	  }, [_vm._m(0), _vm._m(1), _vm._m(2), _vm._m(3), _c('text', {
-	    staticClass: ["register-btn", "bg-danger"]
-	  }, [_vm._v("注册")]), _c('div', {
-	    staticClass: ["margin-tb-30", "link-content"]
-	  }, [_c('text', {
-	    staticClass: ["register", "padding-tb-20", "color-gray"],
-	    on: {
-	      "click": function($event) {
-	        _vm.redirect('/homeView')
+	  }), _c('scroller', {
+	    staticClass: ["scroller"]
+	  }, [_vm._m(0), _c('div', {
+	    staticClass: ["margin-b-20", "bg-white"]
+	  }, [_vm._l((_vm.order_detail.product_data), function(item, index) {
+	    return _c('div', {
+	      staticClass: ["order-item", "padding-rl-20", "padding-tb-20", "border-1px-b"]
+	    }, [_c('image', {
+	      staticClass: ["order-media"],
+	      attrs: {
+	        "src": item.src
 	      }
-	    }
-	  }, [_vm._v("商城")]), _c('text', {
-	    staticClass: ["forgot-pwd", "padding-tb-20", "color-gray"],
-	    on: {
-	      "click": function($event) {
-	        _vm.redirect('/loginView')
-	      }
-	    }
-	  }, [_vm._v("已有账号")])])])], 1)
+	    }), _c('div', {
+	      staticClass: ["order-item-content"]
+	    }, [_c('div', {
+	      staticClass: ["order-item-title", "padding-tb-15"]
+	    }, [_c('text', {
+	      staticClass: ["color-dark", "font-normal"]
+	    }, [_vm._v(_vm._s(item.name))]), _c('text', {
+	      staticClass: ["color-dark", "font-normal"]
+	    }, [_vm._v("×" + _vm._s(item.num))])]), _c('text', {
+	      staticClass: ["color-gray", "font-mini"]
+	    }, [_vm._v(_vm._s(item.spec_info))]), _c('text', {
+	      staticClass: ["color-dark", "font-normal", "padding-tb-15"]
+	    }, [_vm._v("¥" + _vm._s(item.price))])])])
+	  }), _vm._m(1)], 2), _vm._m(2), _vm._m(3)])], 1)
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["logo-content"]
-	  }, [_c('image', {
-	    staticClass: ["logo-image"],
-	    attrs: {
-	      "src": "//misc.360buyimg.com/mtd/pc/index/home/images/logo.v2@2x.png"
-	    }
-	  })])
+	    staticClass: ["order-header", "bg-white", "margin-b-20", "padding-tb-20", "padding-rl-20"]
+	  }, [_c('text', {
+	    staticClass: ["color-dark", "font-normal"]
+	  }, [_vm._v("下单时间:2017.04.26 12:36")]), _c('text', {
+	    staticClass: ["color-dark", "font-normal"]
+	  }, [_vm._v("订单编号:11970750")])])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["border-1px-b"]
-	  }, [_c('input', {
-	    staticClass: ["username", "input", "font-dark"],
-	    attrs: {
-	      "type": "text",
-	      "placeholder": "邮箱账号/手机号"
-	    }
-	  })])
+	    staticClass: ["order-footer", "padding-tb-15"]
+	  }, [_c('text', {
+	    staticClass: ["color-dark", "button", "font-normal", "check-logistics"]
+	  }, [_vm._v("追踪物流")]), _c('text', {
+	    staticClass: ["font-normal", "button", "confirm-receive", "button-danger"]
+	  }, [_vm._v("确认收货")])])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["border-1px-b"]
-	  }, [_c('input', {
-	    staticClass: ["pwd", "input", "font-dark"],
-	    attrs: {
-	      "type": "text",
-	      "placeholder": "密码"
-	    }
-	  })])
+	    staticClass: ["ship-info", "margin-b-20", "bg-white"]
+	  }, [_c('div', {
+	    staticClass: ["border-1px-b", "padding-rl-20"]
+	  }, [_c('text', {
+	    staticClass: ["font-normal", "padding-tb-15", "color-dark"]
+	  }, [_vm._v("王小明     185****9595")]), _c('text', {
+	    staticClass: ["font-normal", "padding-b-15", "color-dark"]
+	  }, [_vm._v("广东省/深圳市/龙华新区/**街道**号")])]), _c('div', {
+	    staticClass: ["pay-info", "border-1px-b", "padding-rl-20"]
+	  }, [_c('text', {
+	    staticClass: ["font-normal", "padding-tb-15", "color-dark"]
+	  }, [_vm._v("支付方式:支付宝")]), _c('text', {
+	    staticClass: ["font-normal", "color-dark"]
+	  }, [_vm._v("商品合计:¥ 319.00")]), _c('text', {
+	    staticClass: ["font-normal", "padding-tb-15", "color-dark"]
+	  }, [_vm._v("运费:¥ 0.00")])]), _c('div', {
+	    staticClass: ["padding-tb-20", "padding-rl-20"]
+	  }, [_c('text', {
+	    staticClass: ["font-normal", "color-danger"]
+	  }, [_vm._v("实付: ¥319.00")])])])
 	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["border-1px-b"]
-	  }, [_c('input', {
-	    staticClass: ["pwd", "input", "font-dark"],
-	    attrs: {
-	      "type": "text",
-	      "placeholder": "确认密码"
-	    }
-	  })])
+	    staticClass: ["service-info", "padding-rl-20", "margin-b-20", "bg-white"]
+	  }, [_c('text', {
+	    staticClass: ["font-mini", "padding-tb-15", "color-gray"]
+	  }, [_vm._v("服务时间")]), _c('div', {
+	    staticClass: ["service-methods", "flex-start", "padding-tb-20"]
+	  }, [_c('text', {
+	    staticClass: ["font-normal", "button", "color-dark"]
+	  }, [_vm._v("在线客服")]), _c('text', {
+	    staticClass: ["font-normal", "button", "color-dark"]
+	  }, [_vm._v("电话客服")])])])
 	}]}
 	module.exports.render._withStripped = true
 

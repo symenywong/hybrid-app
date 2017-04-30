@@ -49,14 +49,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(116)
+	__vue_styles__.push(__webpack_require__(119)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(117)
+	__vue_exports__ = __webpack_require__(120)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(126)
+	var __vue_template__ = __webpack_require__(129)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1704,13 +1704,36 @@
 /* 113 */,
 /* 114 */,
 /* 115 */,
-/* 116 */
+/* 116 */,
+/* 117 */,
+/* 118 */,
+/* 119 */
 /***/ (function(module, exports) {
 
 	module.exports = {
+	  "progress": {
+	    "backgroundColor": "#efeff4",
+	    "width": 750
+	  },
+	  "progress-slider": {
+	    "backgroundColor": "#D53642",
+	    "width": 150,
+	    "height": 4,
+	    "marginLeft": 0
+	  },
 	  "orderView": {
 	    "paddingTop": 120,
 	    "backgroundColor": "#efeff4"
+	  },
+	  "x-tabbar": {
+	    "backgroundColor": "#eff2f7",
+	    "height": 80,
+	    "flexDirection": "row",
+	    "justifyContent": "center",
+	    "alignItems": "center"
+	  },
+	  "tabbar-item": {
+	    "flex": 1
 	  },
 	  "flex-center": {
 	    "flexDirection": "row",
@@ -1811,7 +1834,7 @@
 	}
 
 /***/ }),
-/* 117 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1824,11 +1847,11 @@
 
 	var _xHeader2 = _interopRequireDefault(_xHeader);
 
-	var _xTabbar = __webpack_require__(118);
+	var _xTabbar = __webpack_require__(121);
 
 	var _xTabbar2 = _interopRequireDefault(_xTabbar);
 
-	var _tabbarItem = __webpack_require__(122);
+	var _tabbarItem = __webpack_require__(125);
 
 	var _tabbarItem2 = _interopRequireDefault(_tabbarItem);
 
@@ -1868,16 +1891,104 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	var domModule = weex.requireModule("dom");
+	var modal = weex.requireModule("modal");
+
 	var getBaseUrl = __webpack_require__(7).getBaseURL;
 	exports.default = {
 	    name: 'orderView',
 	    data: function data() {
 	        return {
+	            active: 0,
+	            progress: 0,
 	            tabbar: ['全部', '待付款', '待发货', '已发货', '待评价'],
 	            order_data: {
-	                '11716979': [{
+	                '1-111': [{
 	                    name: '全棉针织纯色四件套',
 	                    src: config.baseUrl.image_url + '/images/netease-home/6634f9fb99d222eef1b690f136db1ccc.png',
 	                    price: '299'
@@ -1890,19 +2001,95 @@
 	                    src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
 	                    price: '599'
 	                }],
-	                '11716998': [{
-	                    name: '日式蓬软太鼓抱枕',
-	                    src: config.baseUrl.image_url + '/images/netease-home/ad953e16ad8c33b714e7af941ce8cd56.png',
-	                    price: '29'
-	                }],
-	                '11816008': [{
+	                '1-222': [{
 	                    name: '安睡慢回弹记忆绵床垫',
 	                    src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
 	                    price: '599'
+	                }],
+	                '1-333': [{
+	                    name: '大头风扇',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a7a524512c34d24a4b9762766dd9d0f0.png',
+	                    price: '119'
 	                }, {
-	                    name: '全棉贡缎纯色床单',
-	                    src: config.baseUrl.image_url + '/images/netease-home/255a4888161f9b4fe530cf319f14551d.png',
-	                    price: '99'
+	                    name: '安睡慢回弹记忆绵床垫',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
+	                    price: '599'
+	                }]
+	            },
+	            order_needPay: {
+	                '1-222': [{
+	                    name: '安睡慢回弹记忆绵床垫',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
+	                    price: '599'
+	                }],
+	                '1-333': [{
+	                    name: '大头风扇',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a7a524512c34d24a4b9762766dd9d0f0.png',
+	                    price: '119'
+	                }, {
+	                    name: '安睡慢回弹记忆绵床垫',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
+	                    price: '599'
+	                }]
+	            },
+	            order_needSend: {
+	                '1-111': [{
+	                    name: '全棉针织纯色四件套',
+	                    src: config.baseUrl.image_url + '/images/netease-home/6634f9fb99d222eef1b690f136db1ccc.png',
+	                    price: '299'
+	                }, {
+	                    name: '大头风扇',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a7a524512c34d24a4b9762766dd9d0f0.png',
+	                    price: '119'
+	                }, {
+	                    name: '安睡慢回弹记忆绵床垫',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
+	                    price: '599'
+	                }],
+	                '1-333': [{
+	                    name: '大头风扇',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a7a524512c34d24a4b9762766dd9d0f0.png',
+	                    price: '119'
+	                }, {
+	                    name: '安睡慢回弹记忆绵床垫',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
+	                    price: '599'
+	                }]
+	            },
+	            order_needReceive: {
+	                '1-111': [{
+	                    name: '全棉针织纯色四件套',
+	                    src: config.baseUrl.image_url + '/images/netease-home/6634f9fb99d222eef1b690f136db1ccc.png',
+	                    price: '299'
+	                }, {
+	                    name: '大头风扇',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a7a524512c34d24a4b9762766dd9d0f0.png',
+	                    price: '119'
+	                }, {
+	                    name: '安睡慢回弹记忆绵床垫',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
+	                    price: '599'
+	                }],
+	                '1-222': [{
+	                    name: '安睡慢回弹记忆绵床垫',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
+	                    price: '599'
+	                }]
+	            },
+	            order_needCommit: {
+	                '1-222': [{
+	                    name: '安睡慢回弹记忆绵床垫',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
+	                    price: '599'
+	                }],
+	                '1-333': [{
+	                    name: '大头风扇',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a7a524512c34d24a4b9762766dd9d0f0.png',
+	                    price: '119'
+	                }, {
+	                    name: '安睡慢回弹记忆绵床垫',
+	                    src: config.baseUrl.image_url + '/images/netease-home/a03ea6f4509439acdafcb7ceba1debe0.png',
+	                    price: '599'
 	                }]
 	            }
 	        };
@@ -1917,9 +2104,20 @@
 	        redirect: function redirect(to) {
 	            var baseUrl = getBaseUrl(this);
 	            navigator.push({
-	                url: '',
+	                url: baseUrl + to + '.js',
 	                animated: 'true'
-	            });
+	            }, function () {});
+	        },
+	        go: function go(index) {
+	            this.active = index;
+	            this.progress = index * 150;
+	        },
+	        scroll: function scroll(e) {
+	            var ratio = parseFloat(e.offsetXRatio);
+	            this.progress = 150 * (this.active - 1) + 150 * -ratio;
+	        },
+	        change: function change(e) {
+	            this.go(parseInt(e.index));
 	        }
 	    },
 	    components: {
@@ -1931,21 +2129,21 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 118 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(119)
+	__vue_styles__.push(__webpack_require__(122)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(120)
+	__vue_exports__ = __webpack_require__(123)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(121)
+	var __vue_template__ = __webpack_require__(124)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -1975,7 +2173,7 @@
 
 
 /***/ }),
-/* 119 */
+/* 122 */
 /***/ (function(module, exports) {
 
 	module.exports = {
@@ -1989,7 +2187,7 @@
 	}
 
 /***/ }),
-/* 120 */
+/* 123 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -2013,7 +2211,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 121 */
+/* 124 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -2024,21 +2222,21 @@
 	module.exports.render._withStripped = true
 
 /***/ }),
-/* 122 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __vue_exports__, __vue_options__
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(123)
+	__vue_styles__.push(__webpack_require__(126)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(124)
+	__vue_exports__ = __webpack_require__(127)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(125)
+	var __vue_template__ = __webpack_require__(128)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -2068,12 +2266,16 @@
 
 
 /***/ }),
-/* 123 */
+/* 126 */
 /***/ (function(module, exports) {
 
 	module.exports = {
 	  "tabbar-item": {
-	    "flex": 1
+	    "flex": 1,
+	    "height": 100,
+	    "flexDirection": "row",
+	    "justifyContent": "center",
+	    "alignItems": "center"
 	  },
 	  "text-center": {
 	    "textAlign": "center"
@@ -2087,10 +2289,10 @@
 	}
 
 /***/ }),
-/* 124 */
+/* 127 */
 /***/ (function(module, exports) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -2102,10 +2304,17 @@
 	//
 	//
 
+	var modal = weex.requireModule("modal");
+
 	exports.default = {
 	    name: 'tabbar-item',
 	    data: function data() {
 	        return {};
+	    },
+	    methods: {
+	        go: function go(e) {
+	            this.$emit("tabbarClick", this.index);
+	        }
 	    },
 	    props: {
 	        title: String,
@@ -2113,15 +2322,18 @@
 	        active: Number
 	    }
 	};
-	module.exports = exports['default'];
+	module.exports = exports["default"];
 
 /***/ }),
-/* 125 */
+/* 128 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["tabbar-item"]
+	    staticClass: ["tabbar-item"],
+	    on: {
+	      "click": _vm.go
+	    }
 	  }, [_c('text', {
 	    staticClass: ["text-center", "font-normal", "color-dark"],
 	    style: {
@@ -2133,7 +2345,7 @@
 	module.exports.render._withStripped = true
 
 /***/ }),
-/* 126 */
+/* 129 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -2149,12 +2361,41 @@
 	      key: index,
 	      attrs: {
 	        "title": item,
-	        "active": 0,
+	        "active": _vm.active,
 	        "index": index
+	      },
+	      on: {
+	        "tabbarClick": _vm.go
 	      },
 	      slot: "tabbar-item"
 	    })
-	  })), _c('list', {
+	  })), _c('div', {
+	    staticClass: ["progress"]
+	  }, [_c('div', {
+	    staticClass: ["progress-slider"],
+	    style: {
+	      'margin-left': _vm.progress + 'px',
+	      width: 750 / _vm.tabbar.length + 'px'
+	    }
+	  })]), (false) ? _c('slider', {
+	    staticClass: ["slider"],
+	    attrs: {
+	      "index": _vm.active
+	    },
+	    on: {
+	      "scroll": _vm.scroll,
+	      "change": _vm.change
+	    }
+	  }, _vm._l((_vm.banner), function(item, index) {
+	    return _c('div', {
+	      staticClass: ["frame"]
+	    }, [_c('image', {
+	      staticClass: ["frame-media"],
+	      attrs: {
+	        "src": item.src
+	      }
+	    })])
+	  })) : _vm._e(), (_vm.active == 0) ? _c('list', {
 	    staticClass: ["order-lists"]
 	  }, _vm._l((_vm.order_data), function(item, index) {
 	    return _c('cell', {
@@ -2170,7 +2411,12 @@
 	    }, [_vm._v("订单编号:" + _vm._s(index))]), _c('text', {
 	      staticClass: ["font-mini", "font-dark", "iconfont", "font-2x"]
 	    }, [_vm._v("")])]), _c('div', {
-	      staticClass: ["order-item-body", "padding-rl-20", "padding-tb-20", "border-1px-b", "flex-space-between"]
+	      staticClass: ["order-item-body", "padding-rl-20", "padding-tb-20", "border-1px-b", "flex-space-between"],
+	      on: {
+	        "click": function($event) {
+	          _vm.redirect('/orderDetailView')
+	        }
+	      }
 	    }, [_c('div', {
 	      staticClass: ["order-item-cell", "flex-start"]
 	    }, _vm._l((item), function(item1, index1) {
@@ -2185,8 +2431,184 @@
 	    }, [_vm._v("交易成功")])]), _vm._m(0, true), _c('div', {
 	      staticClass: ["order-item-divider"]
 	    })])
-	  }))], 1)
+	  })) : _vm._e(), (_vm.active == 1) ? _c('list', {
+	    staticClass: ["order-lists"]
+	  }, _vm._l((_vm.order_needPay), function(item, index) {
+	    return _c('cell', {
+	      staticClass: ["order-item", "bg-white"],
+	      appendAsTree: true,
+	      attrs: {
+	        "append": "tree"
+	      }
+	    }, [_c('div', {
+	      staticClass: ["order-item-header", "padding-rl-20", "padding-tb-20", "border-1px-b", "flex-space-between"]
+	    }, [_c('text', {
+	      staticClass: ["font-mini", "font-dark"]
+	    }, [_vm._v("订单编号:" + _vm._s(index))]), _c('text', {
+	      staticClass: ["font-mini", "font-dark", "iconfont", "font-2x"]
+	    }, [_vm._v("")])]), _c('div', {
+	      staticClass: ["order-item-body", "padding-rl-20", "padding-tb-20", "border-1px-b", "flex-space-between"],
+	      on: {
+	        "click": function($event) {
+	          _vm.redirect('/orderDetailView')
+	        }
+	      }
+	    }, [_c('div', {
+	      staticClass: ["order-item-cell", "flex-start"]
+	    }, _vm._l((item), function(item1, index1) {
+	      return _c('image', {
+	        staticClass: ["order-item-media"],
+	        attrs: {
+	          "src": item1.src
+	        }
+	      })
+	    })), _c('text', {
+	      staticClass: ["font-mini", "font-dark"]
+	    }, [_vm._v("交易成功")])]), _vm._m(1, true), _c('div', {
+	      staticClass: ["order-item-divider"]
+	    })])
+	  })) : _vm._e(), (_vm.active == 2) ? _c('list', {
+	    staticClass: ["order-lists"]
+	  }, _vm._l((_vm.order_needSend), function(item, index) {
+	    return _c('cell', {
+	      staticClass: ["order-item", "bg-white"],
+	      appendAsTree: true,
+	      attrs: {
+	        "append": "tree"
+	      }
+	    }, [_c('div', {
+	      staticClass: ["order-item-header", "padding-rl-20", "padding-tb-20", "border-1px-b", "flex-space-between"]
+	    }, [_c('text', {
+	      staticClass: ["font-mini", "font-dark"]
+	    }, [_vm._v("订单编号:" + _vm._s(index))]), _c('text', {
+	      staticClass: ["font-mini", "font-dark", "iconfont", "font-2x"]
+	    }, [_vm._v("")])]), _c('div', {
+	      staticClass: ["order-item-body", "padding-rl-20", "padding-tb-20", "border-1px-b", "flex-space-between"],
+	      on: {
+	        "click": function($event) {
+	          _vm.redirect('/orderDetailView')
+	        }
+	      }
+	    }, [_c('div', {
+	      staticClass: ["order-item-cell", "flex-start"]
+	    }, _vm._l((item), function(item1, index1) {
+	      return _c('image', {
+	        staticClass: ["order-item-media"],
+	        attrs: {
+	          "src": item1.src
+	        }
+	      })
+	    })), _c('text', {
+	      staticClass: ["font-mini", "font-dark"]
+	    }, [_vm._v("交易成功")])]), _vm._m(2, true), _c('div', {
+	      staticClass: ["order-item-divider"]
+	    })])
+	  })) : _vm._e(), (_vm.active == 3) ? _c('list', {
+	    staticClass: ["order-lists"]
+	  }, _vm._l((_vm.order_needReceive), function(item, index) {
+	    return _c('cell', {
+	      staticClass: ["order-item", "bg-white"],
+	      appendAsTree: true,
+	      attrs: {
+	        "append": "tree"
+	      }
+	    }, [_c('div', {
+	      staticClass: ["order-item-header", "padding-rl-20", "padding-tb-20", "border-1px-b", "flex-space-between"]
+	    }, [_c('text', {
+	      staticClass: ["font-mini", "font-dark"]
+	    }, [_vm._v("订单编号:" + _vm._s(index))]), _c('text', {
+	      staticClass: ["font-mini", "font-dark", "iconfont", "font-2x"]
+	    }, [_vm._v("")])]), _c('div', {
+	      staticClass: ["order-item-body", "padding-rl-20", "padding-tb-20", "border-1px-b", "flex-space-between"],
+	      on: {
+	        "click": function($event) {
+	          _vm.redirect('/orderDetailView')
+	        }
+	      }
+	    }, [_c('div', {
+	      staticClass: ["order-item-cell", "flex-start"]
+	    }, _vm._l((item), function(item1, index1) {
+	      return _c('image', {
+	        staticClass: ["order-item-media"],
+	        attrs: {
+	          "src": item1.src
+	        }
+	      })
+	    })), _c('text', {
+	      staticClass: ["font-mini", "font-dark"]
+	    }, [_vm._v("交易成功")])]), _vm._m(3, true), _c('div', {
+	      staticClass: ["order-item-divider"]
+	    })])
+	  })) : _vm._e(), (_vm.active == 4) ? _c('list', {
+	    staticClass: ["order-lists"]
+	  }, _vm._l((_vm.order_needCommit), function(item, index) {
+	    return _c('cell', {
+	      staticClass: ["order-item", "bg-white"],
+	      appendAsTree: true,
+	      attrs: {
+	        "append": "tree"
+	      }
+	    }, [_c('div', {
+	      staticClass: ["order-item-header", "padding-rl-20", "padding-tb-20", "border-1px-b", "flex-space-between"]
+	    }, [_c('text', {
+	      staticClass: ["font-mini", "font-dark"]
+	    }, [_vm._v("订单编号:" + _vm._s(index))]), _c('text', {
+	      staticClass: ["font-mini", "font-dark", "iconfont", "font-2x"]
+	    }, [_vm._v("")])]), _c('div', {
+	      staticClass: ["order-item-body", "padding-rl-20", "padding-tb-20", "border-1px-b", "flex-space-between"],
+	      on: {
+	        "click": function($event) {
+	          _vm.redirect('/orderDetailView')
+	        }
+	      }
+	    }, [_c('div', {
+	      staticClass: ["order-item-cell", "flex-start"]
+	    }, _vm._l((item), function(item1, index1) {
+	      return _c('image', {
+	        staticClass: ["order-item-media"],
+	        attrs: {
+	          "src": item1.src
+	        }
+	      })
+	    })), _c('text', {
+	      staticClass: ["font-mini", "font-dark"]
+	    }, [_vm._v("交易成功")])]), _vm._m(4, true), _c('div', {
+	      staticClass: ["order-item-divider"]
+	    })])
+	  })) : _vm._e()], 1)
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: ["order-item-footer", "padding-rl-20", "flex-end", "padding-tb-15"]
+	  }, [_c('text', {
+	    staticClass: ["font-normal", "padding-rl-30", "padding-tb-15", "button", "get-logistics", "font-dark"]
+	  }, [_vm._v("追踪物流")]), _c('text', {
+	    staticClass: ["font-normal", "padding-rl-30", "font-dark", "padding-tb-15", "button"]
+	  }, [_vm._v("评价有礼")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: ["order-item-footer", "padding-rl-20", "flex-end", "padding-tb-15"]
+	  }, [_c('text', {
+	    staticClass: ["font-normal", "padding-rl-30", "padding-tb-15", "button", "get-logistics", "font-dark"]
+	  }, [_vm._v("追踪物流")]), _c('text', {
+	    staticClass: ["font-normal", "padding-rl-30", "font-dark", "padding-tb-15", "button"]
+	  }, [_vm._v("评价有礼")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: ["order-item-footer", "padding-rl-20", "flex-end", "padding-tb-15"]
+	  }, [_c('text', {
+	    staticClass: ["font-normal", "padding-rl-30", "padding-tb-15", "button", "get-logistics", "font-dark"]
+	  }, [_vm._v("追踪物流")]), _c('text', {
+	    staticClass: ["font-normal", "padding-rl-30", "font-dark", "padding-tb-15", "button"]
+	  }, [_vm._v("评价有礼")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: ["order-item-footer", "padding-rl-20", "flex-end", "padding-tb-15"]
+	  }, [_c('text', {
+	    staticClass: ["font-normal", "padding-rl-30", "padding-tb-15", "button", "get-logistics", "font-dark"]
+	  }, [_vm._v("追踪物流")]), _c('text', {
+	    staticClass: ["font-normal", "padding-rl-30", "font-dark", "padding-tb-15", "button"]
+	  }, [_vm._v("评价有礼")])])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: ["order-item-footer", "padding-rl-20", "flex-end", "padding-tb-15"]
 	  }, [_c('text', {
