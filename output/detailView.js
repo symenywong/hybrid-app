@@ -181,7 +181,8 @@
 	        // in Browser or WebView
 	        base = h5Base;
 	    }
-	    base = 'http://1.1.1.11:8080/output';
+	    //base='http://1.1.1.11:8080/output' //192.168.3.13:8080
+	    base = 'http://192.168.3.13:8080/output'; //192.168.3.13:8080
 	    return base;
 	}
 
