@@ -274,7 +274,7 @@
 
 <style scoped>
     .progress {
-        background-color: #efeff4;
+        background-color: #f7f7f7;
         width: 750px;
     }
     

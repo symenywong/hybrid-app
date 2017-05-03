@@ -5,8 +5,8 @@
 </template>
 
 <script>
-    const modal=weex.requireModule("modal")
-
+    const modal = weex.requireModule("modal")
+    
     export default {
         name: 'tabbar-item',
         data: function() {
@@ -14,15 +14,15 @@
     
             }
         },
-        methods:{
-            go:function(e){
-                this.$emit("tabbarClick",this.index)
+        methods: {
+            go: function(e) {
+                this.$emit("tabbarClick", this.index)
             }
         },
         props: {
             title: String,
             index: Number,
-            active:Number
+            active: Number
         }
     }
 </script>
@@ -30,10 +30,10 @@
 <style scoped>
     .tabbar-item {
         flex: 1;
-        height:100px;
-        flex-direction:row;
-        justify-content:center;
-        align-items:center;
+        height: 100px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
     
     .text-center {

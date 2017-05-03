@@ -17,7 +17,7 @@
 
 <style scoped>
     .x-tabbar {
-        background-color: #eff2f7;
+        background-color: #f7f7f7;
         height: 80px;
         flex-direction:row;
         justify-content:center;

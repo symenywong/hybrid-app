@@ -50,14 +50,14 @@
 	var __vue_styles__ = []
 
 	/* styles */
-	__vue_styles__.push(__webpack_require__(68)
+	__vue_styles__.push(__webpack_require__(65)
 	)
 
 	/* script */
-	__vue_exports__ = __webpack_require__(69)
+	__vue_exports__ = __webpack_require__(66)
 
 	/* template */
-	var __vue_template__ = __webpack_require__(70)
+	var __vue_template__ = __webpack_require__(67)
 	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
 	if (
 	  typeof __vue_exports__.default === "object" ||
@@ -69,10 +69,10 @@
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/symeny/hybrid-app/src/views/registerView.vue"
+	__vue_options__.__file = "/Users/symeny/hybrid-app/src/views/payMethodsView.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	__vue_options__._scopeId = "data-v-7b6ec436"
+	__vue_options__._scopeId = "data-v-170598ec"
 	__vue_options__.style = __vue_options__.style || {}
 	__vue_styles__.forEach(function (module) {
 	  for (var name in module) {
@@ -392,80 +392,42 @@
 
 /***/ }),
 
-/***/ 68:
+/***/ 65:
 /***/ (function(module, exports) {
 
 	module.exports = {
-	  "input": {
-	    "placeholderColor": "#a0a0a0",
-	    "paddingTop": 30,
-	    "paddingBottom": 30
-	  },
-	  "register-content": {
-	    "paddingTop": 120
-	  },
-	  "border-1px-b": {
-	    "borderBottomStyle": "solid",
-	    "borderBottomWidth": 1,
-	    "borderBottomColor": "#cccccc"
-	  },
-	  "username": {
-	    "marginTop": 40
-	  },
-	  "padding-rl-30": {
-	    "paddingRight": 30,
-	    "paddingLeft": 30
-	  },
-	  "margin-tb-30": {
-	    "marginTop": 30,
-	    "marginBottom": 30
-	  },
-	  "logo-content": {
+	  "scroller": {
 	    "flexDirection": "row",
 	    "justifyContent": "center",
-	    "alignItems": "center"
+	    "alignItems": "center",
+	    "paddingTop": 200
 	  },
-	  "logo-image": {
-	    "width": 260,
-	    "height": 260
-	  },
-	  "bg-danger": {
-	    "backgroundColor": "#D53642"
-	  },
-	  "register-btn": {
+	  "button": {
+	    "width": 600,
+	    "marginBottom": 40,
+	    "borderRadius": 8,
 	    "paddingTop": 30,
 	    "paddingBottom": 30,
-	    "color": "#ffffff",
 	    "textAlign": "center",
-	    "borderRadius": 6,
-	    "marginTop": 50
+	    "color": "#ffffff"
 	  },
-	  "font-dark": {
-	    "color": "#454552"
+	  "button-wx": {
+	    "backgroundColor": "#26a866"
 	  },
-	  "padding-tb-20": {
-	    "paddingTop": 20,
-	    "paddingBottom": 20
+	  "button-alipay": {
+	    "backgroundColor": "#47b8e0"
 	  },
-	  "forgot-pwd": {
-	    "textAlign": "right"
-	  },
-	  "color-gray": {
-	    "color": "#a0a0a0"
-	  },
-	  "link-content": {
-	    "flexDirection": "row",
-	    "justifyContent": "space-between",
-	    "alignItems": "center"
+	  "button-bank": {
+	    "backgroundColor": "#34314c"
 	  }
 	}
 
 /***/ }),
 
-/***/ 69:
+/***/ 66:
 /***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -477,126 +439,52 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var navigator = weex.requireModule("navigator"); //
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
-	var getBaseUrl = __webpack_require__(7).getBaseURL;
-
 	exports.default = {
-	    name: 'registerView',
+	    name: 'payMethodsView',
 	    data: function data() {
 	        return {};
-	    },
-	    methods: {
-	        redirect: function redirect(to) {
-	            var baseUrl = getBaseUrl(this);
-	            navigator.push({
-	                url: baseUrl + to + '.js',
-	                animated: "true"
-	            }, function () {});
-	        }
 	    },
 	    components: {
 	        XHeader: _xHeader2.default
 	    }
-	};
-	module.exports = exports["default"];
+	}; //
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	module.exports = exports['default'];
 
 /***/ }),
 
-/***/ 70:
+/***/ 67:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
-	    staticClass: ["registerView"]
+	    staticClass: ["payMethodsView"]
 	  }, [_c('x-header', {
 	    attrs: {
+	      "title": "支付方式",
 	      "show_back": true
 	    }
-	  }), _c('div', {
-	    staticClass: ["register-content", "padding-rl-30"]
-	  }, [_vm._m(0), _vm._m(1), _vm._m(2), _vm._m(3), _c('text', {
-	    staticClass: ["register-btn", "bg-danger"]
-	  }, [_vm._v("注册")]), _c('div', {
-	    staticClass: ["margin-tb-30", "link-content"]
-	  }, [_c('text', {
-	    staticClass: ["register", "padding-tb-20", "color-gray"],
-	    on: {
-	      "click": function($event) {
-	        _vm.redirect('/homeView')
-	      }
-	    }
-	  }, [_vm._v("商城")]), _c('text', {
-	    staticClass: ["forgot-pwd", "padding-tb-20", "color-gray"],
-	    on: {
-	      "click": function($event) {
-	        _vm.redirect('/loginView')
-	      }
-	    }
-	  }, [_vm._v("已有账号")])])])], 1)
+	  }), _vm._m(0)], 1)
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: ["logo-content"]
-	  }, [_c('image', {
-	    staticClass: ["logo-image"],
-	    attrs: {
-	      "src": "//misc.360buyimg.com/mtd/pc/index/home/images/logo.v2@2x.png"
-	    }
-	  })])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: ["border-1px-b"]
-	  }, [_c('input', {
-	    staticClass: ["username", "input", "font-dark"],
-	    attrs: {
-	      "type": "text",
-	      "placeholder": "邮箱账号/手机号"
-	    }
-	  })])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: ["border-1px-b"]
-	  }, [_c('input', {
-	    staticClass: ["pwd", "input", "font-dark"],
-	    attrs: {
-	      "type": "text",
-	      "placeholder": "密码"
-	    }
-	  })])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: ["border-1px-b"]
-	  }, [_c('input', {
-	    staticClass: ["pwd", "input", "font-dark"],
-	    attrs: {
-	      "type": "text",
-	      "placeholder": "确认密码"
-	    }
-	  })])
+	  return _c('scroller', {
+	    staticClass: ["scroller"]
+	  }, [_c('text', {
+	    staticClass: ["button", "button-wx", "color-white"]
+	  }, [_vm._v("微信支付")]), _c('text', {
+	    staticClass: ["button", "button-alipay", "color-white"]
+	  }, [_vm._v("支付宝")]), _c('text', {
+	    staticClass: ["button", "button-bank", "color-white"]
+	  }, [_vm._v("银行卡")])])
 	}]}
 	module.exports.render._withStripped = true
 

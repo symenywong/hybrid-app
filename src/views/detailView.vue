@@ -1,7 +1,7 @@
 <template>
     <div class="detailView">
         <div class="header padding-rl-30">
-            <div class="back header-item"><text @click="redirect('/homeView')" class="iconfont font-2x">&#xe670;</text></div>
+            <div class="back header-item"><text @click="back" class="iconfont font-2x">&#xe670;</text></div>
             <div class="right-btns header-item">
                 <text @click="redirect('/homeView')" class="iconfont font-2x padding-rl-30">&#xe6c5;</text>
                 <text @click="redirect('/homeView')" class="iconfont font-2x">&#xe65d;</text>
@@ -19,7 +19,7 @@
                 <text class="padding-tb-20 font-mini color-gray">5cm记忆绵的亲密包裹</text>
                 <text class="active padding-b-20">¥26.00~75.00</text>
             </div>
-            <div class="border-1px-b bg-white padding-tb-30 padding-rl-30 spec-info-nav">
+            <div class="border-1px-b bg-white padding-tb-30 padding-rl-30 spec-info-nav" @click="toggle_popup">
                 <text class="font-dark font-normal">规格数量选择</text>
                 <text class="iconfont">&#xe6da;</text>
             </div>
@@ -43,7 +43,6 @@
                 <image class="detail-content-image" :src="item.src" v-for="(item,index) in detail_media"></image>
             </div>
         </scroller>
-    
         <div class="bar-detail border-1px-t">
             <div class="bar-detail-item bar-detail-left border-1px-r">
                 <div class="border-1px-r bar-detail-left-item icon-cart">
@@ -54,8 +53,44 @@
             <div class="bar-detail-item">
                 <text class="text-center font-dark">立即购买</text>
             </div>
-            <div class="addcart bar-detail-item bg-danger">
+            <div class="addcart bar-detail-item bg-danger" @click="add_cart">
                 <text class="text-center color-white">加入购物车</text>
+            </div>
+        </div>
+        <div class="popup border-1px-t" v-if="popup_show">
+            <div class="close-box" @click="toggle_popup">
+                <text class="iconfont close-btn">&#xe60b;</text>
+            </div>
+            <div class="popup-header padding-tb-20 border-1px-b">
+                <image :src="banner_list[0].src" class="popup-header-media padding-l-20"></image>
+                <div class="popup-header-content padding-l-20">
+                    <text class="font-dark">安睡慢回弹记忆绵床垫</text>
+                    <text class="padding-tb-20 font-mini color-gray">5cm记忆绵的亲密包裹</text>
+                    <text class="active padding-b-20">¥26.00~75.00</text>
+                </div>
+            </div>
+            <text class="padding-rl-20 padding-t-20 color-dark font-normal">颜色:</text>
+            <div class="color-box flex-start padding-rl-20 border-1px-b padding-b-20">
+                <text class="button" v-for="item in colors">{{item}}</text>
+            </div>
+            <text class="padding-rl-20 padding-t-20 color-dark font-normal">尺码:</text>
+            <div class="color-box flex-start padding-rl-20 border-1px-b padding-b-20">
+                <text class="button" v-for="item in sizes">{{item}}</text>
+            </div>
+            <text class="padding-rl-20 padding-t-20 color-dark font-normal">库存: 23 (件)</text>
+            <div class="bar-detail border-1px-t">
+                <div class="bar-detail-item bar-detail-left border-1px-r">
+                    <div class="border-1px-r bar-detail-left-item icon-cart">
+                        <text class="iconfont text-center font-1x font-dark">&#xe602;</text>
+                    </div>
+                    <text class="iconfont bar-detail-left-item font-1x font-dark text-center icon-fav">&#xe623;</text>
+                </div>
+                <div class="bar-detail-item">
+                    <text class="text-center font-dark">立即购买</text>
+                </div>
+                <div class="addcart bar-detail-item bg-danger">
+                    <text class="text-center color-white">加入购物车</text>
+                </div>
             </div>
         </div>
     </div>
@@ -72,6 +107,9 @@
         name: 'detailView',
         data: function() {
             return {
+                popup_show: false,
+                colors: ["红色", "白色", "粉色", "紫色", "蓝色", "黄色"],
+                sizes: ["36", "37", "38", "39", "40", "41", "42"],
                 banner_list: [{
                     src: config.baseUrl.image_url + '/images/detail/05645050f7c8df7b4a87994c3fd72475.jpg',
                 }, {
@@ -115,6 +153,19 @@
                 }, function() {
     
                 })
+            },
+            back: function() {
+                navigator.pop({
+                    animated: "true"
+                }, function() {
+    
+                })
+            },
+            toggle_popup: function() {
+                this.popup_show = !this.popup_show;
+            },
+            add_cart: function() {
+                this.redirect('/orderConfirmView');
             }
         },
         components: {
@@ -124,6 +175,67 @@
 </script>
 
 <style scoped>
+    .close-box {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -40px;
+        right: 10px;
+        width: 80px;
+        height: 80px;
+        background-color: #D53642;
+        border-radius: 40px;
+    }
+    
+    .close-btn {
+        color: #fff;
+    }
+    
+    .flex-start {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .popup-header {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .popup-header-media {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .popup-header-content {
+        width: 580px;
+    }
+    
+    .button {
+        border-width: 1px;
+        border-color: #ccc;
+        border-style: solid;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-right: 20px;
+        border-radius: 4px;
+        font-size: 28px;
+        margin-top: 20px;
+    }
+    
+    .popup {
+        position: fixed;
+        bottom: 0;
+        height: 900px;
+        width: 750px;
+        background-color: #fff;
+    }
+    
     .frame-media {
         width: 750px;
         height: 750px;
@@ -312,6 +424,10 @@
         padding-bottom: 20px;
     }
     
+    .padding-t-20 {
+        padding-top: 20px;
+    }
+    
     .padding-tb-15 {
         padding-top: 15px;
         padding-bottom: 15px;
@@ -324,6 +440,10 @@
     .padding-rl-20 {
         padding-left: 20px;
         padding-right: 20px;
+    }
+    
+    .padding-l-20 {
+        margin-left: 20px;
     }
     
     .margin-l-10 {

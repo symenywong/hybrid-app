@@ -2,15 +2,14 @@
   <div class="x-header bg-gray">
     <div class="status-bar"></div>
     <div class="header-title padding-rl-20">
-      <div>
-       <text class="iconfont font-dark back" @click="redirect('/homeView')" v-if="show_back">&#xe670;</text>
+      <div class="x-header-left">
+        <text class="iconfont font-dark back" @click="back" v-if="show_back">&#xe670;</text>
       </div>
-      <div class="x-header-center">
+      <div class="x-header-center x-header-item">
         <text class="font-dark">{{title}}</text>
       </div>
-      <div>
-      <text class="iconfont font-dark" @click="redirect('/homeView')" v-if="show_search">&#xe606;</text>
-        
+      <div class="x-header-right">
+        <text class="iconfont font-dark" @click="redirect('/homeView')" v-if="show_search">&#xe606;</text>
       </div>
     </div>
   </div>
@@ -45,6 +44,13 @@
         }, function() {
   
         })
+      },
+      back: function() {
+        navigator.pop({
+          animated: "true"
+        }, function() {
+  
+        })
       }
     },
     props: {
@@ -65,6 +71,18 @@
   .status-bar {
     height: 40px;
     background-color: #454552;
+  }
+  
+  .x-header-left {
+    flex: 15;
+  }
+  
+  .x-header-right {
+    flex: 15;
+  }
+  
+  .x-header-center {
+    flex: 70;
   }
   
   .x-header {
@@ -88,7 +106,7 @@
     height: 80px;
     color: #454552;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
   }
   
@@ -96,7 +114,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  
   }
   
   .bg-gray {

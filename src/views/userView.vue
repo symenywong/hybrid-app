@@ -6,10 +6,10 @@
           <image :src="user_avatar" @click="redirect('/loginView')" class="avatar-media" style="width:140px;height:140px;"></image>
         </div>
         <div class="padding-tb-20" @click="redirect('/loginView')">
-          <text class="login-guid">symeny</text>
+          <text class="login-guid font-normal">symeny</text>
         </div>
         <div @click="redirect('/loginView')">
-          <text class="login-guid">登陆/注册</text>
+          <text class="login-guid font-normal">登陆/注册</text>
         </div>
       </div>
       <div class="order-header border-1px-b padding-tb-20 padding-rl-20">
@@ -30,13 +30,13 @@
       </div>
       <div class="order-content-1 padding-tb-20">
         <div class="order-item-1 padding-tb-20" v-for="(item,index) in others">
-          <text class="iconfont text-center font-5x font-gray" v-if="index==0">&#xe601;</text>
-          <text class="iconfont text-center font-5x font-gray" v-if="index==1">&#xe891;</text>
-          <text class="iconfont text-center font-5x font-gray" v-if="index==2">&#xe638;</text>
-          <text class="iconfont text-center font-5x font-gray" v-if="index==3">&#xe6ce;</text>
-          <text class="iconfont text-center font-5x font-gray" v-if="index==4">&#xe65d;</text>
-          <text class="iconfont text-center font-5x font-gray" v-if="index==5">&#xe624;</text>
-          <text class="iconfont text-center font-5x font-gray" v-if="index==6">&#xe665;</text>
+          <text class="iconfont text-center font-4x font-gray" v-if="index==0">&#xe601;</text>
+          <text class="iconfont text-center font-4x font-gray" v-if="index==1">&#xe891;</text>
+          <text class="iconfont text-center font-4x font-gray" v-if="index==2">&#xe638;</text>
+          <text class="iconfont text-center font-4x font-gray" v-if="index==3">&#xe6ce;</text>
+          <text class="iconfont text-center font-4x font-gray" v-if="index==4">&#xe65d;</text>
+          <text class="iconfont text-center font-4x font-gray" v-if="index==5">&#xe624;</text>
+          <text class="iconfont text-center font-4x font-gray" v-if="index==6">&#xe665;</text>
           <text class="padding-tb-10 text-center font-mini font-dark">{{item.title}}</text>
         </div>
       </div>
@@ -258,7 +258,10 @@
   }
   
   .font-5x {
-    font-size: 60px;
+    font-size: 52px;
+  }
+   .font-4x {
+    font-size: 40px;
   }
   
   .font-gray {
